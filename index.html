@@ -58,18 +58,14 @@
 }
 </script>
 
-<!-- ================= GOOGLE ANALYTICS (GA4) =================
-     Rick: setelah akun GA dibuat, ganti G-XXXXXXXXXX di DUA tempat
-     di bawah ini, lalu hapus tanda komentar <!- - dan - ->.
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<!-- Google Analytics (GA4) — active -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WVS2XY9SPY"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
+  gtag('config', 'G-WVS2XY9SPY');
 </script>
-============================================================ -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -187,6 +183,7 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 .card-b small{font-size:11.5px;color:var(--magenta);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
 .price{font-family:var(--display);font-size:19px;margin-top:auto;padding-top:6px}
 .add{margin-top:8px;border:2px solid var(--ink);background:var(--ink);color:var(--cream);padding:9px 10px;font-weight:800;font-size:12.5px;text-transform:uppercase;letter-spacing:.05em}
+.sel{margin-top:8px;border:2px solid var(--ink);background:var(--white);color:var(--ink);padding:8px;font-family:var(--body);font-weight:600;font-size:13px;width:100%}
 .add:hover{background:var(--magenta);border-color:var(--magenta)}
 .add.done{background:var(--pink);border-color:var(--pink);color:var(--ink)}
 
@@ -475,50 +472,50 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
    3. Warna/size: nanti isi kolom colors di PRODUCTS setelah data SKU
       dari Shopee siap.
    ================================================================== */
-const WA_NUMBER = "62XXXXXXXXXXX"; // <-- GANTI INI
+const WA_NUMBER = "628128016900";
 const SHOPEE = "https://shopee.co.id/aure.clothing";
 
-/* slug | nama | sub | harga | kategori | badge | colors(nanti) */
+/* slug | nama | sub | harga | kategori | badge | SKU induk | warna (null = belum ada data) */
 const PRODUCTS = [
- ["adeline","Adeline Cardigan","Knit V-neck","65050","cardigan","best"],
- ["sienna","Sienna Wide Pants","High waist","93499","celana","best"],
- ["daily","Daily Pocket Pants","High waist","93499","celana","best"],
- ["solene","Solène Top","Off shoulder","56595","atasan","best"],
- ["viviana","Viviana Cardigan","Pearl button","66000","cardigan",""],
- ["rosalie","Rosalie Top","Knit lace","79395","atasan",""],
- ["odette","Odette Top","Ribbed","62675","atasan",""],
- ["estelle","Estelle Cardigan","Knit V-neck","75025","cardigan",""],
- ["vivienne","Vivienne Cardigan","Knit","73600","cardigan",""],
- ["sabrina","Sabrina Cardigan","Korean style","68850","cardigan",""],
- ["noelle","Noelle Top","Off shoulder","51750","atasan",""],
- ["eveline","Eveline Top","One shoulder knit","64100","atasan",""],
- ["celeste","Celeste Top","Knit lengan panjang","69847","atasan",""],
- ["claire","Claire Top","Knit lace","66950","atasan",""],
- ["eloise","Eloise Top","Off shoulder","56500","atasan",""],
- ["selene","Selene Top","Sabrina off shoulder","59350","atasan",""],
- ["sophie","Sophie Cardigan","Knit","70275","cardigan",""],
- ["valerie","Valerie Blouse","Peplum","71700","atasan",""],
- ["camille","Camille Top","Square neck knit","61725","atasan",""],
- ["maelle","Maelle Top","One shoulder","61250","atasan",""],
- ["lucienne","Lucienne Top","Korean style","60395","atasan",""],
- ["amelie","Amélie Top","Knit lengan panjang","64100","atasan",""],
- ["vania","Vania Pleated Pants","High waist","84905","celana","new"],
- ["giselle","Giselle Twinset","Cardigan + tanktop","75025","set",""],
- ["juliette","Juliette Top","Knit lengan panjang","57925","atasan",""],
- ["elodie","Elodie Top","Lace ribbon","59445","atasan",""],
- ["serena","Serena Top","Off shoulder","58495","atasan",""],
- ["elara","Elara Top","Off shoulder twist","57925","atasan",""],
- ["colette","Colette Top","Knit","59445","atasan",""],
- ["madeleine","Madeleine Top","Off shoulder","61725","atasan",""],
- ["ziva","Ziva Jogger Pants","Motif polkadot","98400","celana","new"],
- ["christa","Christa Top","Sabrina off shoulder","59000","atasan","new"],
- ["aurora","Aurora Pants","Kulot panjang","98400","celana","new"],
- ["melissa","Melissa Top","Sleeveless twist","62600","atasan","new"],
- ["lula","Lula Crop Top","Square neck","65800","atasan","new"],
- ["arumi","Arumi Top","Ruched lengan panjang","72200","atasan","new"],
- ["seara","Seara Top","Off shoulder Korean","74300","atasan","new"],
- ["rose","Rose Knit Top","Off shoulder premium","68900","atasan","new"],
- ["cermin","Cermin Kaca Bulat","Kaca karakter","8000","set","new"]
+ ["adeline","Adeline Cardigan","Knit V-neck","65050","cardigan","best",null,null],
+ ["sienna","Sienna Wide Pants","High waist","93999","celana","best","A1503",["Hitam","Khaki","Dark Choco"]],
+ ["daily","Daily Pocket Pants","High waist","93499","celana","best",null,null],
+ ["solene","Solène Top","Off shoulder","57095","atasan","best","A43",["Putih","Hitam","Navy"]],
+ ["viviana","Viviana Cardigan","Pearl button","66000","cardigan","",null,null],
+ ["rosalie","Rosalie Top","Knit lace","79895","atasan","","A21",["Dusty Pink","Soft Brown","Moss Green"]],
+ ["odette","Odette Top","Ribbed","62675","atasan","",null,null],
+ ["estelle","Estelle Cardigan","Knit V-neck","75525","cardigan","","A38",["White","Black","Maroon"]],
+ ["vivienne","Vivienne Cardigan","Knit","74100","cardigan","","A08",["Putih","Maroon","Hitam"]],
+ ["sabrina","Sabrina Cardigan","Korean style","68850","cardigan","",null,null],
+ ["noelle","Noelle Top","Off shoulder","52250","atasan","","A29",["Dusty Pink","Putih","Soft Brown"]],
+ ["eveline","Eveline Top","One shoulder knit","64600","atasan","","A17",["Misty","Misty Blue","Dusty Pink"]],
+ ["celeste","Celeste Top","Knit lengan panjang","70347","atasan","","A01",["Soft Brown","Dusty Pink","Dark Choco"]],
+ ["claire","Claire Top","Knit lace","66950","atasan","",null,null],
+ ["eloise","Eloise Top","Off shoulder","57000","atasan","","A39",["Cocoa","Maroon","White"]],
+ ["selene","Selene Top","Sabrina off shoulder","59850","atasan","","A26",["Putih","Mauve","Dusty Pink"]],
+ ["sophie","Sophie Cardigan","Knit","70775","cardigan","","A32",["White","Black","Maroon"]],
+ ["valerie","Valerie Blouse","Peplum","71700","atasan","",null,null],
+ ["camille","Camille Top","Square neck knit","61725","atasan","",null,null],
+ ["maelle","Maelle Top","One shoulder","61750","atasan","","A40",["Taro","Moss Green","Baby Blue"]],
+ ["lucienne","Lucienne Top","Korean style","60395","atasan","",null,null],
+ ["amelie","Amélie Top","Knit lengan panjang","64100","atasan","",null,null],
+ ["vania","Vania Pleated Pants","High waist","84905","celana","new",null,null],
+ ["giselle","Giselle Twinset","Cardigan + tanktop","75525","set","","A10",["Dark Choco","Maroon","Hitam"]],
+ ["juliette","Juliette Top","Knit lengan panjang","58425","atasan","","A13",["Taro","Putih","Moss Green"]],
+ ["elodie","Elodie Top","Lace ribbon","59945","atasan","","A02",["Dusty Pink","Soft Brown","Baby Blue"]],
+ ["serena","Serena Top","Off shoulder","58995","atasan","","A07",["Dusty Pink","Sky Blue","Misty"]],
+ ["elara","Elara Top","Off shoulder twist","58425","atasan","","A25",["Olive","Cocoa","White"]],
+ ["colette","Colette Top","Knit","59945","atasan","","A03",["Baby Blue","Dusty Pink","Misty"]],
+ ["madeleine","Madeleine Top","Off shoulder","62225","atasan","","A31",["Maroon","Olive","Cocoa"]],
+ ["ziva","Ziva Jogger Pants","Motif polkadot","98400","celana","new",null,null],
+ ["christa","Christa Top","Sabrina off shoulder","59500","atasan","new","A24",["Taro","Misty","Misty Blue"]],
+ ["aurora","Aurora Pants","Kulot panjang","98400","celana","new",null,null],
+ ["melissa","Melissa Top","Sleeveless twist","63100","atasan","new","A28",["Misty","Moss Green","Soft Brown"]],
+ ["lula","Lula Crop Top","Square neck","66300","atasan","new","A04",["Dusty Pink","Misty","Soft Brown"]],
+ ["arumi","Arumi Top","Ruched lengan panjang","72700","atasan","new","A36",["Taro","Soft Brown","Misty"]],
+ ["seara","Seara Top","Off shoulder Korean","74800","atasan","new","A11",["Dusty Pink","Misty","Misty Blue"]],
+ ["rose","Rose Knit Top","Off shoulder premium","68900","atasan","new",null,null],
+ ["cermin","Cermin Kaca Bulat","Kaca karakter","8000","set","new",null,null]
 ];
 
 const rp = n => "Rp" + Number(n).toLocaleString("id-ID");
@@ -543,6 +540,7 @@ function renderGrid(f){
         <small>${p[2]}</small>
         <h3>Auré ${p[1]}</h3>
         <span class="price">${rp(p[3])}</span>
+        ${p[7] ? `<select class="sel" id="sel-${p[0]}" aria-label="Pilih warna">${p[7].map(c => `<option>${c}</option>`).join("")}</select>` : ""}
         <button class="add" onclick="add('${p[0]}', this)">+ Keranjang</button>
       </div>
     </article>`).join("");
@@ -558,16 +556,18 @@ document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () =
 const names = PRODUCTS.slice(0, 14).map(p => "AURÉ " + p[1].toUpperCase());
 document.getElementById("marq").innerHTML = [...names, ...names].map(n => `<span>${n} ✦</span>`).join("");
 
-/* ---------- cart ---------- */
+/* ---------- cart (key = slug|warna) ---------- */
 function add(slug, btn){
-  cart[slug] = (cart[slug] || 0) + 1;
+  const sel = document.getElementById("sel-" + slug);
+  const key = sel ? slug + "|" + sel.value : slug;
+  cart[key] = (cart[key] || 0) + 1;
   save(); refresh();
   if(btn){ btn.textContent = "Masuk ✓"; btn.classList.add("done");
     setTimeout(() => { btn.textContent = "+ Keranjang"; btn.classList.remove("done"); }, 900); }
 }
-function setQty(slug, d){
-  cart[slug] = (cart[slug] || 0) + d;
-  if(cart[slug] <= 0) delete cart[slug];
+function setQty(key, d){
+  cart[key] = (cart[key] || 0) + d;
+  if(cart[key] <= 0) delete cart[key];
   save(); refresh();
 }
 function refresh(){
@@ -577,32 +577,37 @@ function refresh(){
   document.getElementById("cnt-fab").textContent = n;
   const box = document.getElementById("items");
   let total = 0;
+  const parse = key => {
+    const [slug, color] = key.split("|");
+    return { p: PRODUCTS.find(x => x[0] === slug), color: color || "" };
+  };
   if(!entries.length){
     box.innerHTML = '<p class="empty">Keranjang masih kosong.<br>Yuk pilih dulu di katalog ✦</p>';
   } else {
-    box.innerHTML = entries.map(([slug, q]) => {
-      const p = PRODUCTS.find(x => x[0] === slug);
+    box.innerHTML = entries.map(([key, q]) => {
+      const { p, color } = parse(key);
       total += Number(p[3]) * q;
       return `<div class="item">
-        <h4>Auré ${p[1]}</h4>
+        <h4>Auré ${p[1]}${color ? " — " + color : ""}</h4>
         <div class="row">
           <div class="qty">
-            <button onclick="setQty('${slug}',-1)" aria-label="Kurangi">−</button>
+            <button onclick="setQty('${key}',-1)" aria-label="Kurangi">−</button>
             <span>${q}</span>
-            <button onclick="setQty('${slug}',1)" aria-label="Tambah">+</button>
+            <button onclick="setQty('${key}',1)" aria-label="Tambah">+</button>
           </div>
           <span class="pr">${rp(Number(p[3]) * q)}</span>
         </div>
-        <button class="rm" onclick="setQty('${slug}',-999)">hapus</button>
+        <button class="rm" onclick="setQty('${key}',-999)">hapus</button>
       </div>`;
     }).join("");
   }
   document.getElementById("total").textContent = rp(total);
-  const lines = entries.map(([slug, q], i) => {
-    const p = PRODUCTS.find(x => x[0] === slug);
-    return `${i + 1}. Auré ${p[1]} x${q} — ${rp(Number(p[3]) * q)}`;
+  const lines = entries.map(([key, q], i) => {
+    const { p, color } = parse(key);
+    const sku = p[6] ? ` (SKU ${p[6]})` : "";
+    return `${i + 1}. Auré ${p[1]}${color ? " - " + color : ""}${sku} x${q} — ${rp(Number(p[3]) * q)}`;
   });
-  const msg = `Halo Auré! Saya mau order:%0A%0A${encodeURIComponent(lines.join("\n"))}%0A%0ATotal: ${encodeURIComponent(rp(total))}%0A%0AWarna/ukuran: (isi di sini)%0AAlamat: (isi di sini)`;
+  const msg = `Halo Auré! Saya mau order:%0A%0A${encodeURIComponent(lines.join("\n"))}%0A%0ATotal: ${encodeURIComponent(rp(total))}%0A%0AUkuran/catatan: (isi di sini)%0AAlamat: (isi di sini)`;
   document.getElementById("wa-checkout").href = `https://wa.me/${WA_NUMBER}?text=${msg}`;
 }
 function openCart(){ document.getElementById("drawer").classList.add("open"); refresh(); }
