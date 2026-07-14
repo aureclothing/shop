@@ -1,0 +1,136 @@
+================================================================
+TUTORIAL ADMIN AURE — UPLOAD FOTO KE WEBSITE aureclothing.id
+Versi 2 — 14 Juli 2026
+(Cuma butuh browser + bookmark GitHub yang sudah ada. 10 menit.)
+================================================================
+
+--------------------------------------------------
+BAGIAN A — FOTO APA SAJA YANG MASIH KURANG?
+--------------------------------------------------
+1. FOTO PRODUK — 39 foto, semuanya belum ada.
+   Masuk ke folder bernama: products
+   (daftar nama filenya ada di Bagian C)
+
+2. qris.png — gambar kode QRIS pembayaran.
+   Upload di halaman utama repo (BUKAN di folder products).
+
+3. hero.jpg — OPSIONAL. Foto model paling bagus,
+   untuk tampilan besar di bagian atas website.
+   Upload di halaman utama repo juga.
+   Kalau tidak ada, website tetap bagus (ada tulisan AURE besar).
+
+--------------------------------------------------
+BAGIAN B — ATURAN FOTO
+--------------------------------------------------
+- Bentuk: memanjang ke bawah / portrait, rasio 3:4
+  (contoh ukuran pas: 900 x 1200 piksel)
+- Format: .jpg
+- Ukuran file: usahakan di bawah 300 KB per foto,
+  maksimal 500 KB. (Foto langsung dari HP biasanya 2-5 MB,
+  itu KEBESARAN — website jadi lambat.)
+  Cara mengecilkan yang gampang: buka tinypng.com di browser,
+  tarik semua foto ke sana, download hasilnya. Gratis.
+- Pakai foto produk yang di badan model (seperti di Shopee),
+  1 foto per produk sudah cukup.
+- qris.png: bentuk kotak (persegi), boleh sampai 1000x1000.
+
+--------------------------------------------------
+BAGIAN C — NAMA FILE (WAJIB PERSIS SEPERTI INI)
+--------------------------------------------------
+Aturan: huruf kecil semua, tidak ada spasi, akhiran -1.jpg
+Kalau namanya salah sedikit saja, fotonya tidak muncul.
+
+  Nama file          Produknya
+  ---------------    -------------------------------
+  adeline-1.jpg      Adeline Cardigan
+  sienna-1.jpg       Sienna Wide Pants
+  daily-1.jpg        Daily Pocket Pants
+  solene-1.jpg       Solene Top (tanpa tanda aksen!)
+  viviana-1.jpg      Viviana Cardigan
+  rosalie-1.jpg      Rosalie Top
+  odette-1.jpg       Odette Top
+  estelle-1.jpg      Estelle Cardigan
+  vivienne-1.jpg     Vivienne Cardigan
+  sabrina-1.jpg      Sabrina Cardigan
+  noelle-1.jpg       Noelle Top
+  eveline-1.jpg      Eveline Top
+  celeste-1.jpg      Celeste Top
+  claire-1.jpg       Claire Top
+  eloise-1.jpg       Eloise Top
+  selene-1.jpg       Selene Top
+  sophie-1.jpg       Sophie Cardigan
+  valerie-1.jpg      Valerie Blouse
+  camille-1.jpg      Camille Top
+  maelle-1.jpg       Maelle Top
+  lucienne-1.jpg     Lucienne Top
+  amelie-1.jpg       Amelie Top (tanpa tanda aksen!)
+  vania-1.jpg        Vania Pleated Pants
+  giselle-1.jpg      Giselle Twinset
+  juliette-1.jpg     Juliette Top
+  elodie-1.jpg       Elodie Top
+  serena-1.jpg       Serena Top
+  elara-1.jpg        Elara Top
+  colette-1.jpg      Colette Top
+  madeleine-1.jpg    Madeleine Top
+  ziva-1.jpg         Ziva Jogger Pants
+  christa-1.jpg      Christa Top
+  aurora-1.jpg       Aurora Pants
+  melissa-1.jpg      Melissa Top
+  lula-1.jpg         Lula Crop Top
+  arumi-1.jpg        Arumi Top
+  seara-1.jpg        Seara Top
+  rose-1.jpg         Rose Knit Top
+  cermin-1.jpg       Cermin Kaca Bulat
+
+CONTOH BENAR : adeline-1.jpg
+CONTOH SALAH : Adeline-1.jpg   (pakai huruf besar)
+               adeline 1.jpg   (pakai spasi)
+               adeline-1.jpeg  (harus .jpg)
+               adeline.jpg     (kurang -1)
+
+--------------------------------------------------
+BAGIAN D — CARA UPLOAD FOTO PRODUK (5 LANGKAH)
+--------------------------------------------------
+1. Buka bookmark GitHub, klik repo yang namanya "shop".
+
+2. Klik folder "products".
+   >> Kalau folder products BELUM ADA: klik "Add file" >
+      "Upload files", lalu SEBELUM menaruh foto, tidak bisa
+      bikin folder dari upload — jadi kabari Kak Rick dulu,
+      atau upload lewat cara ini: klik "Add file" >
+      "Create new file", di kolom nama ketik:  products/baca.txt
+      isi tulisannya bebas (misal: "folder foto"), klik
+      "Commit changes". Folder products langsung jadi.
+
+3. Di dalam folder products, klik "Add file" > "Upload files".
+
+4. Tarik (drag) foto-fotonya ke kotak, atau klik
+   "choose your files". Boleh langsung banyak sekaligus.
+   CEK ULANG nama file satu per satu!
+
+5. Scroll ke bawah, klik tombol HIJAU "Commit changes".
+   Tunggu 1-2 menit, buka aureclothing.id, refresh —
+   foto langsung menggantikan kotak krem berhuruf besar.
+
+Untuk qris.png dan hero.jpg: caranya sama persis,
+tapi JANGAN masuk folder products — upload dari halaman
+utama repo (tempat file index.html berada).
+
+--------------------------------------------------
+BAGIAN E — KALAU SALAH
+--------------------------------------------------
+Salah nama / salah foto:
+1. Klik file yang salah di GitHub
+2. Klik ikon tempat sampah (kanan atas)
+3. Klik tombol hijau "Commit changes"
+4. Upload ulang yang benar
+
+--------------------------------------------------
+BAGIAN F — JANGAN DISENTUH
+--------------------------------------------------
+File-file ini bikin website jalan. Jangan dihapus/diubah:
+  index.html, CNAME, robots.txt, sitemap.xml,
+  logo.png, icon.png, tiktok.png, banner-og.jpg
+Kalau ragu, tanya Kak Rick dulu. Lebih baik nanya
+daripada website mati :)
+================================================================
