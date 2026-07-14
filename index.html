@@ -91,6 +91,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
+[id]{scroll-margin-top:72px} /* kompensasi header sticky saat anchor scroll */
 body{font-family:var(--body);background:var(--cream);color:var(--ink);line-height:1.55}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -246,7 +247,7 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 .faq summary::after{content:"+";font-family:var(--display);color:var(--magenta);font-size:20px}
 .faq details[open] summary::after{content:"–"}
 .faq details p{padding:0 16px 14px;font-size:13.5px}
-.seo-copy{margin-top:26px;font-size:12.5px;color:var(--grey);max-width:75ch}
+.seo-copy{margin-top:26px;font-size:12.5px;color:var(--grey);max-width:75ch;padding-left:12px}
 .seo-copy h3{font-family:var(--body);font-weight:800;text-transform:none;font-size:13px;color:var(--ink);margin-bottom:6px}
 
 /* ---------- footer ---------- */
@@ -259,7 +260,7 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
 .foot small{opacity:.6;font-size:12px}
 
 /* ---------- cart drawer ---------- */
-.fab{position:fixed;right:14px;bottom:14px;z-index:60;background:var(--pink);color:var(--ink);border:3px solid var(--ink);padding:14px 18px;font-weight:800;font-size:14px;letter-spacing:.04em;display:flex;gap:8px;align-items:center;box-shadow:4px 4px 0 var(--ink)}
+.fab{position:fixed;right:14px;bottom:14px;z-index:60;background:var(--pink);color:var(--ink);border:3px solid var(--ink);padding:14px 18px;font-weight:800;font-size:14px;letter-spacing:.04em;display:none;gap:8px;align-items:center;box-shadow:4px 4px 0 var(--ink)}
 .fab b{background:var(--ink);color:var(--cream);border-radius:99px;min-width:22px;height:22px;display:grid;place-items:center;font-size:12px;padding:0 6px}
 .drawer{position:fixed;inset:0;z-index:70;display:none}
 .drawer.open{display:block}
@@ -281,12 +282,11 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
 .panel-f{border-top:3px solid var(--ink);padding:14px 16px;display:grid;gap:10px;background:var(--white)}
 .tot{display:flex;justify-content:space-between;font-weight:800;font-size:15px}
 .tot b{font-family:var(--display);font-size:22px}
-.city-btn{border:2px dashed var(--ink);background:var(--cream);padding:11px 12px;font-weight:700;font-size:13px;text-align:left;color:var(--ink);display:flex;gap:8px;align-items:center}
-.city-btn.ok{border-style:solid;background:var(--blush)}
-.city-pick{display:grid;gap:0;border:2px solid var(--ink);background:var(--white)}
-.city-pick input{border:none;border-bottom:2px solid var(--ink);padding:11px 12px;font-family:var(--body);font-size:14px;background:var(--white);color:var(--ink)}
-.city-pick input:focus{outline:none;background:var(--cream)}
-.city-list{max-height:170px;overflow-y:auto}
+.city-wrap{position:relative}
+.city-in{width:100%;border:2px dashed var(--ink);background:var(--cream);padding:11px 12px;font-family:var(--body);font-weight:700;font-size:13px;color:var(--ink)}
+.city-in:focus{outline:none;border-style:solid;background:var(--white)}
+.city-in.ok{border-style:solid;background:var(--blush)}
+.city-list{position:absolute;bottom:calc(100% + 4px);left:0;right:0;background:var(--white);border:2px solid var(--ink);max-height:180px;overflow-y:auto;z-index:5;box-shadow:0 -4px 0 rgba(52,88,76,.15)}
 .city-list button{display:block;width:100%;text-align:left;background:none;border:none;border-bottom:1px solid var(--blush);padding:10px 12px;font-size:13.5px;font-weight:600;color:var(--ink)}
 .city-list button:hover{background:var(--blush)}
 .wa-btn{background:var(--wa);color:#fff;border:3px solid var(--ink);padding:14px;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.04em;text-align:center;text-decoration:none}
@@ -322,7 +322,6 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
       <a href="#katalog">Katalog</a>
       <a href="#cara-order" class="hide-m">Cara Order</a>
       <a href="#reseller">Reseller</a>
-      <button class="cart-btn" onclick="openCart()" aria-label="Buka keranjang">Keranjang <b id="cnt-top">0</b></button>
     </nav>
   </div>
 </header>
@@ -377,25 +376,6 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
   </div>
 </section>
 
-<!-- ============ VOUCHER ============ -->
-<section class="vch" id="voucher">
-  <div class="wrap">
-    <h2>Voucher &amp; Promo</h2>
-    <div class="vch-grid">
-      <div class="v-card">
-        <h3>Diskon Harian s.d. -70%</h3>
-        <p>Setiap 24 jam, 29 produk terpilih otomatis muncul dengan harga coret di katalog — rotasinya acak, jadi favoritmu bisa muncul kapan saja. Kalau hari ini ada, jangan ditunda.</p>
-        <a class="btn btn-solid" href="#katalog">Cek Produk Hari Ini</a>
-      </div>
-      <div class="v-card">
-        <h3>Harga Reseller &amp; Grosir</h3>
-        <p>Ambil beberapa pcs sekaligus dan dapatkan harga khusus di bawah harga retail. Cocok untuk jualan ulang, live selling, atau stok butik.</p>
-        <a class="btn btn-green" id="wa-voucher" href="#" target="_blank" rel="noopener">Minta Pricelist via WA</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ CATALOG ============ -->
 <main class="cat-sec wrap" id="katalog">
   <div class="sec-head">
@@ -435,6 +415,25 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
       <div>
         <h3>Pembayaran aman via QRIS</h3>
         <p>Mendukung semua bank dan e-wallet di Indonesia (BCA, Mandiri, GoPay, OVO, DANA, ShopeePay, dan lainnya). Kirim bukti bayar ke WhatsApp, pesanan langsung kami kemas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VOUCHER ============ -->
+<section class="vch" id="voucher">
+  <div class="wrap">
+    <h2>Voucher &amp; Promo</h2>
+    <div class="vch-grid">
+      <div class="v-card">
+        <h3>Daily Picks</h3>
+        <p>Diskon sampai -70% untuk produk yang paling banyak dicari hari ini. Ayo checkout sebelum ketinggalan.</p>
+        <a class="btn btn-solid" href="#katalog">Cek Produk Hari Ini</a>
+      </div>
+      <div class="v-card">
+        <h3>Gratis Ongkir Rp10.000,-</h3>
+        <p>Untuk pembeli area JABODETABEK dengan pembelian minimum 3 (tiga) pcs.</p>
+        <a class="btn btn-green" id="wa-voucher" href="#" target="_blank" rel="noopener">Klaim via WhatsApp</a>
       </div>
     </div>
   </div>
@@ -495,7 +494,7 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
     <div class="foot-links">
       <a href="https://shopee.co.id/aure.clothing" target="_blank" rel="noopener">Shopee — aure.clothing</a>
       <a href="https://www.tiktok.com/@aureclothing_" target="_blank" rel="noopener">TikTok — @aureclothing_</a>
-      <a href="#" id="wa-foot" target="_blank" rel="noopener">WhatsApp Admin</a>
+      <a href="https://wa.me/6285705923862" target="_blank" rel="noopener">Hesti 0857-0592-3862</a>
       <a href="mailto:info@aureclothing.id">info@aureclothing.id</a>
       <a href="#reseller">Reseller &amp; Grosir</a>
     </div>
@@ -515,10 +514,9 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
     <div class="items" id="items"></div>
     <div class="panel-f">
       <div class="tot"><span>Total</span><b id="total">Rp0</b></div>
-      <button class="city-btn" id="city-btn" onclick="toggleCity()">📍 <span id="city-lbl">Pilih/ketik kotamu</span></button>
-      <div class="city-pick" id="city-pick" hidden>
-        <input id="city-in" placeholder="Nama kota, Provinsi…" autocomplete="off" aria-label="Cari kota">
-        <div class="city-list" id="city-list"></div>
+      <div class="city-wrap">
+        <input id="city-in" class="city-in" placeholder="📍 Ketik Kotamu… (wajib)" autocomplete="off" aria-label="Ketik kotamu">
+        <div class="city-list" id="city-list" hidden></div>
       </div>
       <a class="wa-btn" id="wa-checkout" href="#" target="_blank" rel="noopener">Checkout via WhatsApp</a>
     </div>
@@ -533,7 +531,7 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
    - Kolom terakhir = harga coret (was). null = pakai perkiraan 2x.
    - PROMO_COUNT produk acak per hari tampil dengan harga coret.
    ================================================================== */
-const WA_NUMBER = "628128016900";
+const WA_NUMBER = "628216300393";
 const SHOPEE = "https://shopee.co.id/aure.clothing";
 const PROMO_COUNT = 29;
 
@@ -637,6 +635,8 @@ const order = PRODUCTS.map((_, i) => i);
 for(let i = order.length-1; i > 0; i--){ const j = Math.floor(rand()*(i+1)); [order[i],order[j]] = [order[j],order[i]]; }
 const PROMO = new Set(order.slice(0, PROMO_COUNT).map(i => PRODUCTS[i][0]));
 const wasOf = p => (p[8] && Number(p[8]) > Number(p[3])) ? Number(p[8]) : Math.max(Math.round(Number(p[3])*2/1000)*1000 - 1, 1999);
+/* harga efektif: produk promo = harga diskon; di luar promo = harga asli (coret) */
+const eff = p => PROMO.has(p[0]) ? Number(p[3]) : wasOf(p);
 
 /* ---------- katalog ---------- */
 const grid = document.getElementById("grid");
@@ -658,7 +658,7 @@ function renderGrid(){
     const pct = Math.round((1 - Number(p[3])/w) * 100);
     const priceHTML = onPromo
       ? `<span class="pline"><s class="was">${rp(w)}</s><b class="disc">-${pct}%</b></span><span class="price">${rp(p[3])}</span>`
-      : `<span class="pline"></span><span class="price">${rp(p[3])}</span>`;
+      : `<span class="pline"></span><span class="price">${rp(w)}</span>`;
     return `
     <article class="card">
       <div class="ph">
@@ -710,8 +710,8 @@ function setQty(key, d){
 function refresh(){
   const entries = Object.entries(cart);
   const n = entries.reduce((s, [, q]) => s + q, 0);
-  document.getElementById("cnt-top").textContent = n;
   document.getElementById("cnt-fab").textContent = n;
+  document.querySelector(".fab").style.display = n ? "flex" : "none";
   const box = document.getElementById("items");
   let total = 0;
   const parse = key => {
@@ -723,7 +723,7 @@ function refresh(){
   } else {
     box.innerHTML = entries.map(([key, q]) => {
       const { p, color } = parse(key);
-      total += Number(p[3]) * q;
+      total += eff(p) * q;
       return `<div class="item">
         <h4>Auré ${p[1]}${color ? " — " + color : ""}</h4>
         <div class="row">
@@ -732,7 +732,7 @@ function refresh(){
             <span>${q}</span>
             <button onclick="setQty('${key}',1)" aria-label="Tambah">+</button>
           </div>
-          <span class="pr">${rp(Number(p[3]) * q)}</span>
+          <span class="pr">${rp(eff(p) * q)}</span>
         </div>
         <button class="rm" onclick="setQty('${key}',-999)">hapus</button>
       </div>`;
@@ -742,54 +742,68 @@ function refresh(){
   const lines = entries.map(([key, q], i) => {
     const { p, color } = parse(key);
     const sku = p[6] ? ` (SKU ${p[6]})` : "";
-    return `${i + 1}. Auré ${p[1]}${color ? " - " + color : ""}${sku} x${q} — ${rp(Number(p[3]) * q)}`;
+    return `${i + 1}. Auré ${p[1]}${color ? " - " + color : ""}${sku} x${q} — ${rp(eff(p) * q)}`;
   });
   const msg = `Halo Auré! Saya mau order:%0A%0A${encodeURIComponent(lines.join("\n"))}%0A%0ATotal: ${encodeURIComponent(rp(total))}%0AKota: ${encodeURIComponent(CITY || "-")}%0AAlamat lengkap: (isi di sini)%0AUkuran/catatan: (isi di sini)`;
   document.getElementById("wa-checkout").href = `https://wa.me/${WA_NUMBER}?text=${msg}`;
-  const lbl = document.getElementById("city-lbl"), cbtn = document.getElementById("city-btn");
-  if(CITY){ lbl.textContent = CITY; cbtn.classList.add("ok"); }
-  else { lbl.textContent = "Pilih/ketik kotamu"; cbtn.classList.remove("ok"); }
+  const inp = document.getElementById("city-in");
+  if(document.activeElement !== inp){ inp.value = CITY; }
+  inp.classList.toggle("ok", !!CITY);
 }
 function openCart(){ document.getElementById("drawer").classList.add("open"); refresh(); }
 function closeCart(){ document.getElementById("drawer").classList.remove("open"); }
 
-/* ---------- pilih kota ---------- */
-function toggleCity(){
-  const pick = document.getElementById("city-pick");
-  pick.hidden = !pick.hidden;
-  if(!pick.hidden){ const inp = document.getElementById("city-in"); inp.value = CITY; inp.focus(); listCities(CITY); }
-}
+/* ---------- ketik kotamu (search-bar: dropdown muncul saat fokus/ketik, hilang setelah pilih) ---------- */
+const cityIn = document.getElementById("city-in");
+const cityList = document.getElementById("city-list");
 function listCities(q){
-  const box = document.getElementById("city-list");
   const s = (q || "").trim().toLowerCase();
   const hits = s ? CITIES.filter(c => c.toLowerCase().includes(s)).slice(0, 8) : CITIES.slice(0, 8);
-  box.innerHTML = hits.map(c => `<button type="button" onclick="setCity('${c.replace(/'/g,"\\'")}')">${c}</button>`).join("") ||
-    '<button type="button" onclick="setCity(document.getElementById(\'city-in\').value)">Pakai: "' + (q||"") + '"</button>';
+  cityList.innerHTML = hits.length
+    ? hits.map(c => `<button type="button" data-c="${c.replace(/"/g,'&quot;')}">${c}</button>`).join("")
+    : `<button type="button" data-c="${(q||"").replace(/"/g,'&quot;')}">Pakai: "${q||""}"</button>`;
+  cityList.hidden = false;
 }
 function setCity(c){
-  CITY = c.trim();
+  CITY = (c || "").trim();
   save();
-  document.getElementById("city-pick").hidden = true;
+  cityIn.value = CITY;
+  cityIn.classList.toggle("ok", !!CITY);
+  cityList.hidden = true;
+  cityIn.blur();
   refresh();
 }
-document.getElementById("city-in").addEventListener("input", e => listCities(e.target.value));
-document.getElementById("city-in").addEventListener("keydown", e => {
-  if(e.key === "Enter" && e.target.value.trim()){ setCity(e.target.value); }
+cityIn.addEventListener("focus", () => listCities(cityIn.value));
+cityIn.addEventListener("input", e => listCities(e.target.value));
+cityIn.addEventListener("keydown", e => {
+  if(e.key === "Enter" && e.target.value.trim()) setCity(e.target.value);
+});
+/* pointerdown supaya kepilih sebelum blur menutup list */
+cityList.addEventListener("pointerdown", e => {
+  const b = e.target.closest("button[data-c]");
+  if(b){ e.preventDefault(); setCity(b.dataset.c); }
+});
+cityIn.addEventListener("blur", () => {
+  setTimeout(() => {
+    cityList.hidden = true;
+    const v = cityIn.value.trim();
+    if(v && v !== CITY){ CITY = v; save(); cityIn.classList.add("ok"); refresh(); }
+  }, 150);
 });
 
 document.getElementById("wa-checkout").addEventListener("click", function(e){
   if(!Object.keys(cart).length){ e.preventDefault(); alert("Keranjang masih kosong."); return; }
-  if(!CITY){ e.preventDefault(); alert("Pilih/ketik kotamu dulu ya, biar admin bisa cek ongkir 🙂");
-    document.getElementById("city-pick").hidden = false; document.getElementById("city-in").focus(); return; }
+  if(!CITY && !cityIn.value.trim()){ e.preventDefault(); alert("Ketik kotamu dulu ya, biar admin bisa cek ongkir 🙂");
+    cityIn.focus(); return; }
+  if(!CITY) { CITY = cityIn.value.trim(); save(); }
   if(typeof gtag === "function") gtag("event", "begin_checkout");
 });
 
-/* WA links (voucher, reseller & footer) */
-const waGeneric = `https://wa.me/${WA_NUMBER}?text=` + encodeURIComponent("Halo Auré! Saya mau tanya-tanya.");
+/* WA links (voucher & reseller) */
 const waReseller = `https://wa.me/${WA_NUMBER}?text=` + encodeURIComponent("Halo Auré! Saya mau Daftar Reseller / minta pricelist grosir.");
-document.getElementById("wa-foot").href = waGeneric;
+const waOngkir = `https://wa.me/${WA_NUMBER}?text=` + encodeURIComponent("Halo Auré! Saya mau klaim Gratis Ongkir Rp10.000 (JABODETABEK, min. 3 pcs).");
 document.getElementById("wa-reseller").href = waReseller;
-document.getElementById("wa-voucher").href = waReseller;
+document.getElementById("wa-voucher").href = waOngkir;
 refresh();
 
 /* ---------- game: tag diskon yang nggak bisa ditangkap ---------- */
