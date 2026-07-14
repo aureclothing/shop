@@ -6,27 +6,30 @@
 
 <!-- ================= SEO ================= -->
 <title>Aure Clothing — Atasan Knit &amp; Cardigan Wanita Korean Style | Official Store</title>
-<meta name="description" content="Aure Clothing: atasan knit wanita, cardigan Korean style, off shoulder top, dan celana high waist. Harga mulai Rp51 ribu, kualitas premium, kirim dari Indonesia. Order via WhatsApp, Shopee, atau TikTok Shop. Terbuka untuk reseller & grosir.">
+<meta name="description" content="Aure Clothing: atasan knit wanita, cardigan Korean style, off shoulder top, dan celana high waist. Elevated essentials for daily wear — dikirim dari Jakarta. Order via WhatsApp, Shopee, atau TikTok Shop. Terbuka untuk reseller & grosir.">
 <meta name="keywords" content="aure clothing, atasan wanita, atasan knit wanita, cardigan wanita, cardigan korean style, off shoulder top, baju wanita korean style, celana high waist wanita, crop top knit, reseller baju wanita, grosir baju wanita, supplier baju korean style">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Aure Clothing">
 <meta name="geo.region" content="ID">
 <meta name="geo.placename" content="Indonesia">
+<meta name="theme-color" content="#EAE7DC">
 <link rel="canonical" href="https://aureclothing.id/">
 <link rel="alternate" hreflang="id" href="https://aureclothing.id/">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Aure Clothing">
 <meta property="og:title" content="Aure Clothing — Atasan Knit & Cardigan Wanita Korean Style">
-<meta property="og:description" content="Knitwear & Korean-style tops untuk hari-harimu. Order via WhatsApp, Shopee, atau TikTok Shop. Open reseller & grosir.">
+<meta property="og:description" content="Elevated essentials for daily wear. Order via WhatsApp, Shopee, atau TikTok Shop. Open reseller & grosir.">
 <meta property="og:url" content="https://aureclothing.id/">
 <meta property="og:image" content="https://aureclothing.id/banner-og.jpg">
 <meta property="og:locale" content="id_ID">
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Aure Clothing — Atasan Knit & Cardigan Wanita Korean Style">
-<meta name="twitter:description" content="Knitwear & Korean-style tops. Order via WhatsApp, Shopee, atau TikTok Shop.">
+<meta name="twitter:description" content="Elevated essentials for daily wear. Order via WhatsApp, Shopee, atau TikTok Shop.">
 <meta name="twitter:image" content="https://aureclothing.id/banner-og.jpg">
 
 <!-- Structured data -->
@@ -37,6 +40,8 @@
   "name": "Aure Clothing",
   "alternateName": "Auré",
   "url": "https://aureclothing.id/",
+  "logo": "https://aureclothing.id/logo.png",
+  "image": "https://aureclothing.id/banner-og.jpg",
   "description": "Brand fashion wanita Indonesia: atasan knit, cardigan Korean style, off shoulder top, dan celana high waist. Terbuka untuk reseller dan pembelian grosir.",
   "currenciesAccepted": "IDR",
   "paymentAccepted": "QRIS, Bank Transfer",
@@ -73,12 +78,14 @@
 
 <style>
 :root{
-  --cream:#E3E2DF;
-  --ink:#5D001E;
-  --magenta:#9A1750;
-  --pink:#EE4C7C;
-  --blush:#E3AFBC;
-  --white:#FAF9F7;
+  --cream:#EAE7DC;   /* latar */
+  --ink:#34584C;     /* hijau logo — teks & garis */
+  --magenta:#E85A4F; /* merah — aksen kuat / diskon */
+  --pink:#E98074;    /* salmon — aksen lembut */
+  --blush:#D8C3A5;   /* tan — permukaan */
+  --grey:#8E8D8A;    /* abu — teks sekunder */
+  --white:#F7F5EF;
+  --wa:#1fae53;
   --display:'Anton',sans-serif;
   --body:'Archivo',sans-serif;
 }
@@ -90,20 +97,16 @@ a{color:inherit}
 button{font-family:var(--body);cursor:pointer}
 .wrap{width:min(1200px,100%);margin:0 auto;padding:0 16px}
 h1,h2,h3,.disp{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
-:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
-
-/* halftone helper */
-.dots{background-image:radial-gradient(var(--magenta) 1.3px, transparent 1.3px);background-size:9px 9px}
+:focus-visible{outline:3px solid var(--magenta);outline-offset:2px}
+.dots{background-image:radial-gradient(var(--pink) 1.3px, transparent 1.3px);background-size:9px 9px}
 
 /* ---------- header ---------- */
 header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3px solid var(--ink)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;gap:10px}
-.mark{display:grid;grid-template-columns:auto auto;gap:2px 5px;text-decoration:none}
-.mark span{font-family:var(--display);font-size:15px;line-height:1;background:var(--ink);color:var(--cream);padding:2px 4px}
-.mark span:nth-child(2n){background:var(--pink);color:var(--ink)}
+.logo{height:30px;width:auto}
 .nav-links{display:flex;gap:14px;align-items:center;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
 .nav-links a{text-decoration:none}
-.nav-links a:hover{color:var(--pink)}
+.nav-links a:hover{color:var(--magenta)}
 .nav-links .hide-m{display:none}
 .cart-btn{background:var(--ink);color:var(--cream);border:none;padding:8px 14px;font-weight:800;font-size:13px;letter-spacing:.05em;display:flex;gap:7px;align-items:center}
 .cart-btn:hover{background:var(--magenta)}
@@ -114,21 +117,26 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 .hero-txt{padding:44px 20px 36px;position:relative}
 .hero-txt .dots{position:absolute;top:18px;left:20px;width:78px;height:78px;opacity:.6}
 .eyebrow{font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--magenta);margin-bottom:14px;position:relative}
-.hero h1{font-size:clamp(44px,11vw,96px);margin-bottom:16px;position:relative}
-.hero h1 em{font-style:normal;color:var(--pink);-webkit-text-stroke:1px var(--ink)}
+.hero h1{font-size:clamp(40px,10vw,88px);margin-bottom:16px;position:relative}
+.hero h1 em{font-style:normal;color:var(--magenta)}
 .hero p{max-width:46ch;font-size:15px;margin-bottom:24px}
-.cta-row{display:flex;flex-wrap:wrap;gap:10px}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;font-weight:800;font-size:14px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:3px solid var(--ink);transition:transform .12s ease}
 .btn:active{transform:translateY(2px)}
 .btn-solid{background:var(--ink);color:var(--cream)}
 .btn-solid:hover{background:var(--magenta);border-color:var(--magenta)}
 .btn-line{background:transparent;color:var(--ink)}
 .btn-line:hover{background:var(--blush)}
+.btn-green{background:var(--wa);border-color:var(--wa);color:#fff}
+.btn-green:hover{background:#178a42;border-color:#178a42}
+.btn-tt{display:inline-flex;align-items:center;justify-content:center;border:3px solid var(--ink);background:var(--white);padding:8px 14px}
+.btn-tt img{height:30px;width:auto}
+.btn-tt:hover{background:var(--blush)}
 .hero-vis{position:relative;min-height:280px;background:
-  linear-gradient(rgba(93,0,30,.82),rgba(154,23,80,.62)),
-  radial-gradient(circle at 30% 20%, #EE4C7C 0%, #9A1750 45%, #5D001E 100%);
+  linear-gradient(rgba(52,88,76,.72),rgba(52,88,76,.5)),
+  radial-gradient(circle at 30% 20%, #D8C3A5 0%, #6f8f82 45%, #34584C 100%);
   overflow:hidden;display:grid;place-items:center}
-.hero-vis::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(227,226,223,.35) 1.2px,transparent 1.2px);background-size:8px 8px;mix-blend-mode:overlay}
+.hero-vis::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(234,231,220,.35) 1.2px,transparent 1.2px);background-size:8px 8px;mix-blend-mode:overlay}
 .hero-vis img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:luminosity;opacity:.85}
 .hero-vis .disp{position:relative;color:var(--cream);font-size:clamp(60px,16vw,150px);opacity:.28;transform:rotate(-6deg);user-select:none}
 .hero-note{position:absolute;bottom:12px;right:14px;font-size:11px;color:var(--cream);opacity:.8;letter-spacing:.1em;text-transform:uppercase}
@@ -139,7 +147,6 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 .marq span{font-family:var(--display);font-size:16px;letter-spacing:.08em;padding:0 18px}
 .marq span:nth-child(2n){color:var(--pink)}
 @keyframes slide{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.marq-track{animation:none}}
 
 /* ---------- game banner ---------- */
 .game-sec{padding:34px 0;border-bottom:3px solid var(--ink);background:var(--blush)}
@@ -147,87 +154,105 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 .game-head h2{font-size:clamp(26px,6vw,44px)}
 .game-head p{font-size:13px;font-weight:600}
 .game{position:relative;width:100%;aspect-ratio:1600/250;min-height:190px;max-height:260px;background:var(--ink);border:3px solid var(--ink);overflow:hidden;touch-action:manipulation}
-.game::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(238,76,124,.45) 1.5px,transparent 1.5px);background-size:14px 14px}
-.hole{position:absolute;bottom:8%;width:54px;height:14px;background:#3d0014;border-radius:50%;box-shadow:inset 0 3px 5px rgba(0,0,0,.6)}
-#tag{position:absolute;border:none;background:var(--pink);color:var(--ink);font-family:var(--display);font-size:22px;padding:8px 16px;transform:rotate(-4deg);box-shadow:4px 4px 0 var(--magenta);transition:left .18s,top .18s;user-select:none;touch-action:none}
+.game::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(233,128,116,.4) 1.5px,transparent 1.5px);background-size:14px 14px}
+.hole{position:absolute;bottom:8%;width:54px;height:14px;background:#22392f;border-radius:50%;box-shadow:inset 0 3px 5px rgba(0,0,0,.6)}
+#tag{position:absolute;border:none;background:var(--pink);color:var(--ink);font-family:var(--display);font-size:22px;padding:8px 16px;transform:rotate(-4deg);box-shadow:4px 4px 0 var(--magenta);transition:left .08s linear,top .08s linear;user-select:none;touch-action:none}
 #tag::after{content:"";position:absolute;left:-6px;top:50%;width:10px;height:10px;background:var(--cream);border-radius:50%;transform:translateY(-50%)}
 #taunt{position:absolute;top:10px;left:12px;right:12px;color:var(--cream);font-weight:800;font-size:clamp(13px,3.5vw,17px);letter-spacing:.03em;text-transform:uppercase}
 #taunt small{display:block;font-weight:500;text-transform:none;letter-spacing:0;opacity:.75;font-size:12px}
-.game-over{position:absolute;inset:0;background:rgba(93,0,30,.94);display:none;place-items:center;text-align:center;padding:16px}
+.game-over{position:absolute;inset:0;background:rgba(52,88,76,.95);display:none;place-items:center;text-align:center;padding:16px}
 .game-over.show{display:grid}
 .game-over p{color:var(--cream);font-family:var(--display);font-size:clamp(17px,4.5vw,30px);margin-bottom:12px;text-transform:uppercase}
 .game-over .btn{border-color:var(--pink);background:var(--pink);color:var(--ink);padding:10px 16px;font-size:13px}
 
+/* ---------- voucher ---------- */
+.vch{padding:38px 0;border-bottom:3px solid var(--ink)}
+.vch h2{font-size:clamp(28px,7vw,48px);margin-bottom:16px;padding-left:12px}
+.vch-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.v-card{border:3px dashed var(--ink);background:var(--white);padding:20px;display:grid;gap:10px;justify-items:start}
+.v-card h3{font-size:22px;color:var(--magenta)}
+.v-card p{font-size:14px;max-width:52ch}
+.v-card .btn{padding:10px 16px;font-size:13px}
+
 /* ---------- catalog ---------- */
 .cat-sec{padding:44px 0 30px}
-.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:6px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:6px;padding-left:12px}
 .sec-head h2{font-size:clamp(34px,8vw,64px)}
 .sec-head .idx{font-family:var(--display);color:var(--magenta);font-size:14px;letter-spacing:.15em}
-.sec-sub{font-size:14px;max-width:60ch;margin-bottom:18px}
-.filters{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;margin-bottom:18px;scrollbar-width:none}
+.sec-sub{font-size:14px;max-width:62ch;margin-bottom:18px;padding-left:12px}
+.filter-row{display:flex;align-items:center;gap:6px;margin-bottom:10px}
+.f-arr{flex:0 0 auto;border:2px solid var(--ink);background:var(--white);width:34px;height:38px;font-size:18px;font-weight:800;color:var(--ink)}
+.f-arr:hover{background:var(--blush)}
+.filters{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;scroll-behavior:smooth}
 .filters::-webkit-scrollbar{display:none}
 .chip{flex:0 0 auto;border:2px solid var(--ink);background:transparent;color:var(--ink);padding:8px 16px;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.05em}
 .chip.on{background:var(--ink);color:var(--cream)}
 .chip:hover{background:var(--blush)}
 .chip.on:hover{background:var(--ink)}
+.search-row{display:flex;gap:8px;margin-bottom:18px}
+.search-row input{flex:1;border:2px solid var(--ink);background:var(--white);padding:11px 14px;font-family:var(--body);font-size:14px;color:var(--ink)}
+.search-row input::placeholder{color:var(--grey)}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .card{background:var(--white);border:2px solid var(--ink);display:flex;flex-direction:column}
 .ph{position:relative;aspect-ratio:3/4;background:linear-gradient(160deg,var(--blush),var(--cream) 70%);display:grid;place-items:center;overflow:hidden;border-bottom:2px solid var(--ink)}
-.ph::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(154,23,80,.28) 1.2px,transparent 1.2px);background-size:10px 10px}
-.ph .init{font-family:var(--display);font-size:64px;color:var(--magenta);opacity:.5;position:relative}
+.ph::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(142,141,138,.3) 1.2px,transparent 1.2px);background-size:10px 10px}
+.ph .init{font-family:var(--display);font-size:64px;color:var(--ink);opacity:.35;position:relative}
 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .badge{position:absolute;top:8px;left:8px;background:var(--pink);color:var(--ink);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:3px 8px;z-index:2}
 .badge.new{background:var(--ink);color:var(--cream)}
 .card-b{padding:10px 12px 12px;display:flex;flex-direction:column;gap:4px;flex:1}
 .card-b h3{font-family:var(--body);font-weight:800;font-size:14px;text-transform:none;line-height:1.25}
-.card-b small{font-size:11.5px;color:var(--magenta);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
-.price{font-family:var(--display);font-size:19px;margin-top:auto;padding-top:6px}
-.add{margin-top:8px;border:2px solid var(--ink);background:var(--ink);color:var(--cream);padding:9px 10px;font-weight:800;font-size:12.5px;text-transform:uppercase;letter-spacing:.05em}
+.card-b small{font-size:11.5px;color:var(--grey);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.pline{display:flex;gap:6px;align-items:center;margin-top:auto;padding-top:6px}
+.was{color:var(--grey);font-size:12.5px;text-decoration:line-through}
+.disc{background:var(--magenta);color:#fff;font-size:10.5px;font-weight:800;padding:2px 6px}
+.price{font-family:var(--display);font-size:19px}
+.card .price:only-of-type{margin-top:auto;padding-top:6px}
 .sel{margin-top:8px;border:2px solid var(--ink);background:var(--white);color:var(--ink);padding:8px;font-family:var(--body);font-weight:600;font-size:13px;width:100%}
+.add{margin-top:8px;border:2px solid var(--ink);background:var(--ink);color:var(--cream);padding:9px 10px;font-weight:800;font-size:12.5px;text-transform:uppercase;letter-spacing:.05em}
 .add:hover{background:var(--magenta);border-color:var(--magenta)}
 .add.done{background:var(--pink);border-color:var(--pink);color:var(--ink)}
+.noresult{grid-column:1/-1;text-align:center;padding:30px;font-size:14px;color:var(--grey)}
 
 /* ---------- how to order / payment ---------- */
 .order-sec{background:var(--ink);color:var(--cream);padding:46px 0;border-top:3px solid var(--ink)}
 .order-sec h2{font-size:clamp(30px,7vw,54px);margin-bottom:8px}
 .order-sec h2 em{font-style:normal;color:var(--pink)}
 .order-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:22px}
-.step{border:2px solid rgba(227,226,223,.35);padding:16px}
+.step{border:2px solid rgba(234,231,220,.35);padding:16px}
 .step .n{font-family:var(--display);color:var(--pink);font-size:26px}
 .step h3{font-size:17px;margin:6px 0 4px;font-family:var(--body);font-weight:800;text-transform:none}
 .step p{font-size:13.5px;opacity:.85}
-.qris-box{margin-top:26px;display:grid;grid-template-columns:1fr;gap:16px;align-items:center;border:2px solid var(--pink);padding:18px;background:rgba(238,76,124,.08)}
+.qris-box{margin-top:26px;display:grid;grid-template-columns:1fr;gap:16px;align-items:center;border:2px solid var(--pink);padding:18px;background:rgba(233,128,116,.08)}
 .qris-box img{width:180px;background:var(--cream);padding:8px;margin:0 auto}
 .qris-ph{width:180px;aspect-ratio:1;margin:0 auto;background:var(--cream);color:var(--ink);display:grid;place-items:center;text-align:center;font-size:12px;font-weight:700;padding:10px}
 .qris-box h3{font-family:var(--body);font-weight:800;text-transform:none;font-size:16px;margin-bottom:6px}
 .qris-box p{font-size:13.5px;opacity:.85}
 
 /* ---------- reseller ---------- */
-.rsl{padding:46px 0;border-bottom:3px solid var(--ink);background:
-  linear-gradient(rgba(227,226,223,.92),rgba(227,226,223,.92))}
+.rsl{padding:46px 0;border-bottom:3px solid var(--ink)}
 .rsl-in{display:grid;gap:18px}
 .rsl h2{font-size:clamp(32px,8vw,60px)}
-.rsl h2 span{color:var(--pink);-webkit-text-stroke:1px var(--ink)}
+.rsl h2 span{color:var(--magenta)}
 .rsl p{font-size:14.5px;max-width:58ch}
 .rsl ul{list-style:none;display:grid;gap:8px;font-size:14px;font-weight:600}
 .rsl li::before{content:"→ ";color:var(--magenta);font-weight:800}
 
 /* ---------- faq / seo ---------- */
 .faq{padding:40px 0}
-.faq h2{font-size:clamp(26px,6vw,42px);margin-bottom:16px}
+.faq h2{font-size:clamp(26px,6vw,42px);margin-bottom:16px;padding-left:12px}
 .faq details{border:2px solid var(--ink);background:var(--white);margin-bottom:10px}
 .faq summary{padding:14px 16px;font-weight:800;font-size:14px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}
-.faq summary::after{content:"+";font-family:var(--display);color:var(--pink);font-size:20px}
+.faq summary::after{content:"+";font-family:var(--display);color:var(--magenta);font-size:20px}
 .faq details[open] summary::after{content:"–"}
 .faq details p{padding:0 16px 14px;font-size:13.5px}
-.seo-copy{margin-top:26px;font-size:12.5px;color:#7a4b58;max-width:75ch}
+.seo-copy{margin-top:26px;font-size:12.5px;color:var(--grey);max-width:75ch}
 .seo-copy h3{font-family:var(--body);font-weight:800;text-transform:none;font-size:13px;color:var(--ink);margin-bottom:6px}
 
 /* ---------- footer ---------- */
 footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
 .foot{display:grid;gap:22px}
-.foot .mark span{background:var(--cream);color:var(--ink)}
-.foot .mark span:nth-child(2n){background:var(--pink)}
+.logo-f{height:40px;width:auto;filter:brightness(0) invert(96%) sepia(4%) saturate(300%) hue-rotate(10deg)}
 .foot-links{display:grid;gap:8px;font-size:14px}
 .foot-links a{text-decoration:none;font-weight:600}
 .foot-links a:hover{color:var(--pink)}
@@ -238,7 +263,7 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
 .fab b{background:var(--ink);color:var(--cream);border-radius:99px;min-width:22px;height:22px;display:grid;place-items:center;font-size:12px;padding:0 6px}
 .drawer{position:fixed;inset:0;z-index:70;display:none}
 .drawer.open{display:block}
-.drawer .bg{position:absolute;inset:0;background:rgba(93,0,30,.55)}
+.drawer .bg{position:absolute;inset:0;background:rgba(52,88,76,.55)}
 .panel{position:absolute;right:0;top:0;bottom:0;width:min(420px,92vw);background:var(--cream);border-left:3px solid var(--ink);display:flex;flex-direction:column}
 .panel-h{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:3px solid var(--ink)}
 .panel-h h3{font-size:22px}
@@ -256,16 +281,25 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
 .panel-f{border-top:3px solid var(--ink);padding:14px 16px;display:grid;gap:10px;background:var(--white)}
 .tot{display:flex;justify-content:space-between;font-weight:800;font-size:15px}
 .tot b{font-family:var(--display);font-size:22px}
-.wa-btn{background:#1fae53;color:#fff;border:3px solid var(--ink);padding:14px;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.04em;text-align:center;text-decoration:none}
-.panel-f small{font-size:11.5px;opacity:.7;text-align:center}
+.city-btn{border:2px dashed var(--ink);background:var(--cream);padding:11px 12px;font-weight:700;font-size:13px;text-align:left;color:var(--ink);display:flex;gap:8px;align-items:center}
+.city-btn.ok{border-style:solid;background:var(--blush)}
+.city-pick{display:grid;gap:0;border:2px solid var(--ink);background:var(--white)}
+.city-pick input{border:none;border-bottom:2px solid var(--ink);padding:11px 12px;font-family:var(--body);font-size:14px;background:var(--white);color:var(--ink)}
+.city-pick input:focus{outline:none;background:var(--cream)}
+.city-list{max-height:170px;overflow-y:auto}
+.city-list button{display:block;width:100%;text-align:left;background:none;border:none;border-bottom:1px solid var(--blush);padding:10px 12px;font-size:13.5px;font-weight:600;color:var(--ink)}
+.city-list button:hover{background:var(--blush)}
+.wa-btn{background:var(--wa);color:#fff;border:3px solid var(--ink);padding:14px;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.04em;text-align:center;text-decoration:none}
 
 /* ---------- desktop ---------- */
 @media(min-width:760px){
   .nav{padding:12px 24px}
+  .logo{height:36px}
   .nav-links .hide-m{display:inline}
   .hero{grid-template-columns:1.1fr 1fr}
   .hero-txt{padding:70px 40px 60px}
   .hero-vis{min-height:0;border-left:3px solid var(--ink)}
+  .vch-grid{grid-template-columns:1fr 1fr}
   .grid{grid-template-columns:repeat(4,1fr);gap:18px}
   .order-grid{grid-template-columns:repeat(3,1fr)}
   .qris-box{grid-template-columns:auto 1fr;gap:26px}
@@ -283,9 +317,7 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
 <!-- ============ HEADER ============ -->
 <header>
   <div class="nav">
-    <a class="mark" href="#" aria-label="Aure Clothing">
-      <span>AU</span><span>RÉ</span><span>CLO</span><span>.ID</span>
-    </a>
+    <a href="#" aria-label="Aure Clothing"><img src="logo.png" alt="Auré" class="logo"></a>
     <nav class="nav-links" aria-label="Navigasi utama">
       <a href="#katalog">Katalog</a>
       <a href="#cara-order" class="hide-m">Cara Order</a>
@@ -299,12 +331,13 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
 <section class="hero">
   <div class="hero-txt">
     <div class="dots" aria-hidden="true"></div>
-    <p class="eyebrow">Knitwear · Korean Style · Indonesia</p>
-    <h1>Rajut yang<br>bikin <em>betah</em><br>dipandang.</h1>
-    <p>Atasan knit, cardigan, dan celana high waist untuk hari-hari kamu — dari meeting pagi sampai hangout malam. Dikirim langsung dari gudang kami di Indonesia.</p>
+    <p class="eyebrow">Elevated. Essentials. For Daily Wear</p>
+    <h1>Stay classy<br>in <em>timeless</em><br>classics.</h1>
+    <p>Atasan knit, cardigan, dan celana high waist yang bikin kamu percaya diri sepanjang hari. Dikirim langsung dari warehouse Auré di Jakarta.</p>
     <div class="cta-row">
       <a class="btn btn-solid" href="#katalog">Lihat Katalog</a>
       <a class="btn btn-line" href="https://shopee.co.id/aure.clothing" target="_blank" rel="noopener">Belanja di Shopee</a>
+      <a class="btn-tt" href="https://www.tiktok.com/@aureclothing_" target="_blank" rel="noopener" aria-label="Aure Clothing di TikTok"><img src="tiktok.png" alt="TikTok"></a>
     </div>
   </div>
   <div class="hero-vis" aria-hidden="true">
@@ -324,21 +357,40 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
   <div class="wrap">
     <div class="game-head">
       <h2>Tangkap diskonnya</h2>
-      <p>Tap tag <strong>-70%</strong> kalau bisa. Serius, coba aja.</p>
+      <p>Tap tag <strong>-50%</strong> kalau bisa. Serius, coba aja.</p>
     </div>
     <div class="game" id="game" aria-label="Mini game: tangkap tag diskon">
-      <p id="taunt">Diskonnya di situ tuh 👀<small>Skor kamu: selalu 0. Bukan salah kamu kok.</small></p>
+      <p id="taunt">Diskonnya di situ tuh 👀<small>Skor kamu: 0. Bukan salah kamu kok.</small></p>
       <div class="hole" style="left:8%"></div>
       <div class="hole" style="left:28%"></div>
       <div class="hole" style="left:48%"></div>
       <div class="hole" style="left:68%"></div>
       <div class="hole" style="left:86%"></div>
-      <button id="tag" aria-label="Tag diskon 70 persen">-70%</button>
+      <button id="tag" aria-label="Tag diskon 50 persen">-50%</button>
       <div class="game-over" id="gameover">
         <div>
-          <p>Yaudah… diskonnya nggak lari kalau di Shopee 😌</p>
-          <a class="btn" href="https://shopee.co.id/aure.clothing" target="_blank" rel="noopener">Ambil Diskon di Shopee →</a>
+          <p>Yaudah… diskonnya ga lari lagi 😌</p>
+          <a class="btn" href="#voucher">Ambil Diskon di Sini →</a>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VOUCHER ============ -->
+<section class="vch" id="voucher">
+  <div class="wrap">
+    <h2>Voucher &amp; Promo</h2>
+    <div class="vch-grid">
+      <div class="v-card">
+        <h3>Diskon Harian s.d. -70%</h3>
+        <p>Setiap 24 jam, 29 produk terpilih otomatis muncul dengan harga coret di katalog — rotasinya acak, jadi favoritmu bisa muncul kapan saja. Kalau hari ini ada, jangan ditunda.</p>
+        <a class="btn btn-solid" href="#katalog">Cek Produk Hari Ini</a>
+      </div>
+      <div class="v-card">
+        <h3>Harga Reseller &amp; Grosir</h3>
+        <p>Ambil beberapa pcs sekaligus dan dapatkan harga khusus di bawah harga retail. Cocok untuk jualan ulang, live selling, atau stok butik.</p>
+        <a class="btn btn-green" id="wa-voucher" href="#" target="_blank" rel="noopener">Minta Pricelist via WA</a>
       </div>
     </div>
   </div>
@@ -350,13 +402,20 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
     <h2>Katalog</h2>
     <span class="idx" id="count"></span>
   </div>
-  <p class="sec-sub">Harga promo mengikuti Shopee. Foto produk menyusul — untuk detail warna &amp; ukuran, tanya via WhatsApp atau cek langsung di Shopee.</p>
-  <div class="filters" role="tablist" aria-label="Filter kategori">
-    <button class="chip on" data-f="all">Semua</button>
-    <button class="chip" data-f="atasan">Atasan</button>
-    <button class="chip" data-f="cardigan">Cardigan</button>
-    <button class="chip" data-f="celana">Celana</button>
-    <button class="chip" data-f="set">Set &amp; Aksesoris</button>
+  <p class="sec-sub">Setiap potongan Auré lahir dari satu prinsip: pakaian harian harus terasa istimewa. Knit premium yang jatuhnya rapi di badan, siluet yang memuji bentuk tubuh, dan warna-warna yang mudah dipadukan — dibuat untuk dipakai berulang kali dan tetap terlihat effortless, dari jam kerja sampai akhir pekan.</p>
+  <div class="filter-row">
+    <button class="f-arr" id="fL" aria-label="Geser kategori ke kiri">‹</button>
+    <div class="filters" id="filters" role="tablist" aria-label="Filter kategori">
+      <button class="chip on" data-f="all">Semua</button>
+      <button class="chip" data-f="atasan">Atasan</button>
+      <button class="chip" data-f="cardigan">Cardigan</button>
+      <button class="chip" data-f="celana">Celana</button>
+      <button class="chip" data-f="set">Set &amp; Aksesoris</button>
+    </div>
+    <button class="f-arr" id="fR" aria-label="Geser kategori ke kanan">›</button>
+  </div>
+  <div class="search-row">
+    <input type="search" id="q" placeholder="🔍 Cari produk… (mis. cardigan, off shoulder, celana)" aria-label="Cari produk">
   </div>
   <div class="grid" id="grid"></div>
 </main>
@@ -367,8 +426,8 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
     <h2>Cara order <em>di sini</em></h2>
     <p style="opacity:.85;font-size:14.5px;max-width:60ch">Belanja lewat website lebih hemat — tanpa potongan platform, jadi kami bisa kasih harga &amp; bonus terbaik.</p>
     <div class="order-grid">
-      <div class="step"><span class="n">1</span><h3>Pilih produk</h3><p>Tap "+ Keranjang" di katalog, atur jumlahnya.</p></div>
-      <div class="step"><span class="n">2</span><h3>Checkout via WhatsApp</h3><p>Pesananmu otomatis terformat rapi. Admin konfirmasi stok, warna, ukuran &amp; ongkir.</p></div>
+      <div class="step"><span class="n">1</span><h3>Pilih produk</h3><p>Tap "+ Keranjang" di katalog, pilih warna dan atur jumlahnya.</p></div>
+      <div class="step"><span class="n">2</span><h3>Checkout via WhatsApp</h3><p>Isi kotamu, lalu pesananmu otomatis terformat rapi ke admin kami.</p></div>
       <div class="step"><span class="n">3</span><h3>Bayar pakai QRIS</h3><p>Scan sekali dari aplikasi bank / e-wallet apa pun. Pesanan langsung diproses.</p></div>
     </div>
     <div class="qris-box">
@@ -392,9 +451,9 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
       <ul>
         <li>Harga spesial reseller &amp; tier grosir</li>
         <li>Foto &amp; video produk siap pakai untuk kontenmu</li>
-        <li>Restock rutin, dikirim dari gudang Indonesia</li>
+        <li>Restock rutin, dikirim dari warehouse Jakarta</li>
       </ul>
-      <div><a class="btn btn-solid" id="wa-reseller" href="#" target="_blank" rel="noopener">Daftar via WhatsApp</a></div>
+      <div><a class="btn btn-green" id="wa-reseller" href="#" target="_blank" rel="noopener">Daftar via WhatsApp</a></div>
     </div>
   </div>
 </section>
@@ -404,7 +463,7 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
   <h2>Tanya-tanya dulu</h2>
   <details>
     <summary>Bagaimana cara order dari website ini?</summary>
-    <p>Pilih produk di katalog, masukkan ke keranjang, lalu tap "Checkout via WhatsApp". Pesananmu terkirim otomatis ke admin kami untuk konfirmasi warna, ukuran, stok, dan ongkos kirim.</p>
+    <p>Pilih produk di katalog, masukkan ke keranjang, isi kotamu, lalu tap "Checkout via WhatsApp". Pesananmu terkirim otomatis ke admin kami untuk konfirmasi ukuran, stok, dan ongkos kirim.</p>
   </details>
   <details>
     <summary>Metode pembayaran apa saja yang tersedia?</summary>
@@ -416,32 +475,31 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
   </details>
   <details>
     <summary>Bagaimana cara jadi reseller Aure Clothing?</summary>
-    <p>Hubungi admin kami via WhatsApp dengan menyebutkan "Daftar Reseller". Kami akan kirimkan katalog harga khusus reseller dan ketentuan pembelian grosir.</p>
+    <p>Hubungi admin kami via WhatsApp dengan menyebutkan "Daftar Reseller", atau email ke reseller@aureclothing.id. Kami akan kirimkan katalog harga khusus reseller dan ketentuan pembelian grosir.</p>
   </details>
   <details>
     <summary>Berapa lama pengiriman?</summary>
-    <p>Pesanan yang dibayar sebelum jam 3 sore dikirim di hari yang sama (Senin–Sabtu). Estimasi tiba 1–5 hari kerja tergantung kota tujuan.</p>
+    <p>Pesanan yang dibayar sebelum jam 3 sore dikirim di hari yang sama (Senin–Sabtu) dari warehouse kami di Jakarta. Estimasi tiba 1–5 hari kerja tergantung kota tujuan.</p>
   </details>
 
   <div class="seo-copy">
     <h3>Aure Clothing — Atasan Knit &amp; Cardigan Wanita Korean Style</h3>
-    <p>Aure Clothing adalah brand fashion wanita Indonesia yang menghadirkan atasan knit wanita, cardigan Korean style, off shoulder top, crop top, twinset, hingga celana high waist dan kulot. Semua koleksi Auré dirancang dengan bahan rajut premium yang nyaman dipakai harian, cocok untuk gaya Korean look, outfit kantor, maupun OOTD kampus. Tersedia di website resmi aureclothing.id, Shopee, dan TikTok Shop dengan pengiriman ke seluruh Indonesia. Terbuka untuk kerjasama reseller baju wanita dan pembelian grosir.</p>
+    <p>Aure Clothing adalah brand fashion wanita Indonesia yang menghadirkan atasan knit wanita, cardigan Korean style, off shoulder top, crop top, twinset, hingga celana high waist dan kulot. Semua koleksi Auré dirancang dengan bahan rajut premium yang nyaman dipakai harian, cocok untuk gaya Korean look, outfit kantor, maupun OOTD kampus. Tersedia di website resmi aureclothing.id, Shopee, dan TikTok Shop dengan pengiriman dari Jakarta ke seluruh Indonesia. Terbuka untuk kerjasama reseller baju wanita dan pembelian grosir.</p>
   </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap foot">
-    <a class="mark" href="#" aria-label="Aure Clothing">
-      <span>AU</span><span>RÉ</span><span>CLO</span><span>.ID</span>
-    </a>
+    <a href="#" aria-label="Aure Clothing"><img src="logo.png" alt="Auré" class="logo-f"></a>
     <div class="foot-links">
       <a href="https://shopee.co.id/aure.clothing" target="_blank" rel="noopener">Shopee — aure.clothing</a>
       <a href="https://www.tiktok.com/@aureclothing_" target="_blank" rel="noopener">TikTok — @aureclothing_</a>
       <a href="#" id="wa-foot" target="_blank" rel="noopener">WhatsApp Admin</a>
+      <a href="mailto:info@aureclothing.id">info@aureclothing.id</a>
       <a href="#reseller">Reseller &amp; Grosir</a>
     </div>
-    <small>© 2026 Aure Clothing · Indonesia</small>
+    <small>© 2026 Aure Clothing · Jakarta, Indonesia</small>
   </div>
 </footer>
 
@@ -457,78 +515,151 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
     <div class="items" id="items"></div>
     <div class="panel-f">
       <div class="tot"><span>Total</span><b id="total">Rp0</b></div>
+      <button class="city-btn" id="city-btn" onclick="toggleCity()">📍 <span id="city-lbl">Pilih/ketik kotamu</span></button>
+      <div class="city-pick" id="city-pick" hidden>
+        <input id="city-in" placeholder="Nama kota, Provinsi…" autocomplete="off" aria-label="Cari kota">
+        <div class="city-list" id="city-list"></div>
+      </div>
       <a class="wa-btn" id="wa-checkout" href="#" target="_blank" rel="noopener">Checkout via WhatsApp</a>
-      <small>Warna &amp; ukuran dikonfirmasi admin di WhatsApp. Ongkir menyusul sesuai alamat.</small>
     </div>
   </div>
 </div>
 
 <script>
 /* ==================================================================
-   KONFIGURASI — Rick, edit bagian ini saja:
-   1. WA_NUMBER : ganti dengan nomor WhatsApp (format 62..., tanpa +)
-   2. Foto produk: upload ke folder /products dengan nama {slug}-1.jpg
-      (daftar slug = kolom pertama di PRODUCTS). Foto otomatis muncul.
-   3. Warna/size: nanti isi kolom colors di PRODUCTS setelah data SKU
-      dari Shopee siap.
+   KONFIGURASI
+   - Foto produk: upload ke folder /products dengan nama {slug}-1.jpg
+     (slug = kolom pertama di PRODUCTS). Foto otomatis muncul.
+   - Kolom terakhir = harga coret (was). null = pakai perkiraan 2x.
+   - PROMO_COUNT produk acak per hari tampil dengan harga coret.
    ================================================================== */
 const WA_NUMBER = "628128016900";
 const SHOPEE = "https://shopee.co.id/aure.clothing";
+const PROMO_COUNT = 29;
 
-/* slug | nama | sub | harga | kategori | badge | SKU induk | warna (null = belum ada data) */
+/* slug | nama | sub | harga | kategori | badge | SKU induk | warna (sesuai nama variasi Shopee) | harga coret */
 const PRODUCTS = [
- ["adeline","Adeline Cardigan","Knit V-neck","65050","cardigan","best",null,null],
- ["sienna","Sienna Wide Pants","High waist","93999","celana","best","A1503",["Hitam","Khaki","Dark Choco"]],
- ["daily","Daily Pocket Pants","High waist","93499","celana","best",null,null],
- ["solene","Solène Top","Off shoulder","57095","atasan","best","A43",["Putih","Hitam","Navy"]],
- ["viviana","Viviana Cardigan","Pearl button","66000","cardigan","",null,null],
- ["rosalie","Rosalie Top","Knit lace","79895","atasan","","A21",["Dusty Pink","Soft Brown","Moss Green"]],
- ["odette","Odette Top","Ribbed","62675","atasan","",null,null],
- ["estelle","Estelle Cardigan","Knit V-neck","75525","cardigan","","A38",["White","Black","Maroon"]],
- ["vivienne","Vivienne Cardigan","Knit","74100","cardigan","","A08",["Putih","Maroon","Hitam"]],
- ["sabrina","Sabrina Cardigan","Korean style","68850","cardigan","",null,null],
- ["noelle","Noelle Top","Off shoulder","52250","atasan","","A29",["Dusty Pink","Putih","Soft Brown"]],
- ["eveline","Eveline Top","One shoulder knit","64600","atasan","","A17",["Misty","Misty Blue","Dusty Pink"]],
- ["celeste","Celeste Top","Knit lengan panjang","70347","atasan","","A01",["Soft Brown","Dusty Pink","Dark Choco"]],
- ["claire","Claire Top","Knit lace","66950","atasan","",null,null],
- ["eloise","Eloise Top","Off shoulder","57000","atasan","","A39",["Cocoa","Maroon","White"]],
- ["selene","Selene Top","Sabrina off shoulder","59850","atasan","","A26",["Putih","Mauve","Dusty Pink"]],
- ["sophie","Sophie Cardigan","Knit","70775","cardigan","","A32",["White","Black","Maroon"]],
- ["valerie","Valerie Blouse","Peplum","71700","atasan","",null,null],
- ["camille","Camille Top","Square neck knit","61725","atasan","",null,null],
- ["maelle","Maelle Top","One shoulder","61750","atasan","","A40",["Taro","Moss Green","Baby Blue"]],
- ["lucienne","Lucienne Top","Korean style","60395","atasan","",null,null],
- ["amelie","Amélie Top","Knit lengan panjang","64100","atasan","",null,null],
- ["vania","Vania Pleated Pants","High waist","84905","celana","new",null,null],
- ["giselle","Giselle Twinset","Cardigan + tanktop","75525","set","","A10",["Dark Choco","Maroon","Hitam"]],
- ["juliette","Juliette Top","Knit lengan panjang","58425","atasan","","A13",["Taro","Putih","Moss Green"]],
- ["elodie","Elodie Top","Lace ribbon","59945","atasan","","A02",["Dusty Pink","Soft Brown","Baby Blue"]],
- ["serena","Serena Top","Off shoulder","58995","atasan","","A07",["Dusty Pink","Sky Blue","Misty"]],
- ["elara","Elara Top","Off shoulder twist","58425","atasan","","A25",["Olive","Cocoa","White"]],
- ["colette","Colette Top","Knit","59945","atasan","","A03",["Baby Blue","Dusty Pink","Misty"]],
- ["madeleine","Madeleine Top","Off shoulder","62225","atasan","","A31",["Maroon","Olive","Cocoa"]],
- ["ziva","Ziva Jogger Pants","Motif polkadot","98400","celana","new",null,null],
- ["christa","Christa Top","Sabrina off shoulder","59500","atasan","new","A24",["Taro","Misty","Misty Blue"]],
- ["aurora","Aurora Pants","Kulot panjang","98400","celana","new",null,null],
- ["melissa","Melissa Top","Sleeveless twist","63100","atasan","new","A28",["Misty","Moss Green","Soft Brown"]],
- ["lula","Lula Crop Top","Square neck","66300","atasan","new","A04",["Dusty Pink","Misty","Soft Brown"]],
- ["arumi","Arumi Top","Ruched lengan panjang","72700","atasan","new","A36",["Taro","Soft Brown","Misty"]],
- ["seara","Seara Top","Off shoulder Korean","74800","atasan","new","A11",["Dusty Pink","Misty","Misty Blue"]],
- ["rose","Rose Knit Top","Off shoulder premium","68900","atasan","new",null,null],
- ["cermin","Cermin Kaca Bulat","Kaca karakter","8000","set","new",null,null]
+ ["adeline","Adeline Cardigan","Knit V-neck","65050","cardigan","best","A23",["Maroon","Dark Choco","Putih","Hitam"],"199999"],
+ ["sienna","Sienna Wide Pants","High waist","93999","celana","best","A1503",["Coffe Brown","Misty","Terracotta","Hitam","Khaki","Dark Choco"],"199999"],
+ ["daily","Daily Pocket Pants","High waist","93499","celana","best","A1446",["Olive","Dark Brown","Oat","Charcoal","Khaki","Hitam"],"199999"],
+ ["solene","Solène Top","Off shoulder","57095","atasan","best","A43",["Hitam","Dusty Pink","Misty","Putih","Baby Blue","Maroon","Soft Brown","Navy","Dark Choco"],"199000"],
+ ["viviana","Viviana Cardigan","Pearl button","66000","cardigan","","A41",["Black","Navy","Dusty Pink","Maroon","White","Coca"],"199999"],
+ ["rosalie","Rosalie Top","Knit lace","79895","atasan","","A21",["Hitam","Putih","Dusty Pink","Maroon","Moss Green","Misty Blue","Taro","Misty","Dark Choco","Soft Brown"],"199999"],
+ ["odette","Odette Top","Ribbed halter","62675","atasan","","A22",["Misty","Hitam","Maroon","Dusty Pink","Moss Green","Putih","White Polka","Soft Blue Polka","Dark Choco","Baby Blue","Navy","Pink Soft Polka","Taro","Ash Grey","Black Polka","Soft Brown"],"199000"],
+ ["estelle","Estelle Cardigan","Knit V-neck","75525","cardigan","","A38",["Maroon","Cocoa","White","Black"],"199000"],
+ ["vivienne","Vivienne Cardigan","Gold button","74100","cardigan","","A08",["Putih","Maroon","Hitam","Dark Choco"],"199999"],
+ ["sabrina","Sabrina Cardigan","Korean style","68850","cardigan","","A33",["Putih","Hitam","Dark Choco","Maroon"],"199999"],
+ ["noelle","Noelle Top","Off shoulder","52250","atasan","","A29",["Dark Choco","Dusty Pink","Misty","Soft Brown","Putih","Grey","Moss Green","Misty Blue","Black","Maroon"],"199999"],
+ ["eveline","Eveline Top","One shoulder knit","64600","atasan","","A17",["Misty Blue","Dusty Pink","Moss Green","Misty","Taro","Soft Brown"],"199999"],
+ ["celeste","Celeste Top","Knit lengan panjang","70347","atasan","","A01",["Dusty Pink","Soft Brown","Sky Blue","Hitam","Maroon","Sage Green","Misty","Dark Choco","Ash Grey"],"123333"],
+ ["claire","Claire Top","Knit lace","66950","atasan","","A09",["Baby Blue Polka","Maroon","White Polka","Baby Pink Polka","Espresso","Charcoal Grey","Baby Blue","Black Polka","Dusty Pink","Black","Ash Grey","Allmond"],"199999"],
+ ["eloise","Eloise Top","Pearl button","57000","atasan","","A39",["Black","Cocoa","Navy","Dusty Pink","Maroon","White"],"199000"],
+ ["selene","Selene Top","Sabrina off shoulder","59850","atasan","","A26",["Soft Brown","Baby Blue","Maroon","Misty Blue","Hitam","Putih","Mauve","Misty","Dark Choco","Moss Green","Dusty Pink"],"199999"],
+ ["sophie","Sophie Cardigan","Ribbed knit","70775","cardigan","","A32",["Black","Maroon","Cocoa","White"],"199999"],
+ ["valerie","Valerie Blouse","Peplum","71700","atasan","","A35",["Maroon","Cocoa","White","Black"],"199999"],
+ ["camille","Camille Top","Square neck knit","61725","atasan","","A16",["Misty Blue","Moss Green","Dusty Pink","Misty","Soft Brown","Taro"],"199999"],
+ ["maelle","Maelle Top","One shoulder","61750","atasan","","A40",["Dusty Pink","Taro","Moss Green","Baby Blue","Soft Brown","Misty"],"199000"],
+ ["lucienne","Lucienne Top","Balletcore ribbon","60395","atasan","","A44",["Navy","Dusty Pink","Ash Grey","White Polka","Baby Pink Polka","Black Polka","Maroon","Baby Blue","Hitam","Baby Blue Polka"],"199000"],
+ ["amelie","Amélie Top","Twist ring knit","64100","atasan","","A12",["Mauve","Taro","Dusty Pink","Misty","Soft Brown","Misty Blue","Dark Choco"],"199999"],
+ ["vania","Vania Pleated Pants","High waist ankle","84905","celana","new","A1528",["Misty","Hitam","Putih","Mocca","Coksu","Navy"],"199999"],
+ ["giselle","Giselle Twinset","Cardigan + tanktop","75525","set","","A10",["Putih","Dark Choco","Maroon","Hitam"],"199999"],
+ ["juliette","Juliette Top","Layered knit","58425","atasan","","A13",["Taro","Hitam","Misty Blue","Soft Brown","Maroon","Misty","Dark Choco","Moss Green","Putih","Dusty Pink"],"199999"],
+ ["elodie","Elodie Top","Lace ribbon","59945","atasan","","A02",["Baby Blue","Misty","Dusty Pink","Soft Brown"],"175000"],
+ ["serena","Serena Top","Lace halter","58995","atasan","","A07",["Misty","Soft Brown","Dusty Pink","Sky Blue"],"199999"],
+ ["elara","Elara Top","Off shoulder twist","58425","atasan","","A25",["Light Grey","Black","misty grey","Baby Blue","Cocoa","Mauve","White","Olive","Sage Green","Green","Dusty Blue","Dusty Pink","Almond"],"126000"],
+ ["colette","Colette Top","Big lace bow","59945","atasan","","A03",["Soft Brown","Baby Blue","Dusty Pink","Misty"],"105000"],
+ ["madeleine","Madeleine Top","Off shoulder twist","62225","atasan","","A31",["White","Black","Cocoa","Pink","Dusty Blue","Olive","Charcoal Grey","Almond","Maroon","Mauve"],"199999"],
+ ["ziva","Ziva Jogger Pants","Motif polkadot","98400","celana","new","1601",["White Polkadot","Red polkadot"],"199000"],
+ ["christa","Christa Top","Sabrina asimetris","59500","atasan","new","A24",["Dusty Pink","Taro","Misty","Misty Blue","Moss Green","Soft Brown"],"155000"],
+ ["aurora","Aurora Pants","Kulot polkadot","98400","celana","new","1602",["Red Polkadot","White Polkadot"],"199000"],
+ ["melissa","Melissa Top","Sleeveless twist","63100","atasan","new","A28",["Misty","Taro","Soft Brown","Maroon","Putih","Dark Choco","Hitam","Moss Green","Misty Blue","Dusty Pink"],"106000"],
+ ["lula","Lula Crop Top","Square neck brukat","66300","atasan","new","A04",["Sky Blue","Dusty Pink","Misty","Soft Brown"],"120000"],
+ ["arumi","Arumi Top","Ruched lengan panjang","72700","atasan","new","A36",["Hitam","Misty","Taro","Moss Green","Misty Blue","Dusty Pink","Soft Brown","Maroon","Dark Choco","Putih"],"175300"],
+ ["seara","Seara Top","Off shoulder Korean","74800","atasan","new","A11",["Misty Blue","Moss Green","Soft Brown","Taro","Dusty Pink","Misty"],"171000"],
+ ["rose","Rose Knit Top","Off shoulder premium","68900","atasan","new","A15",["Baby Blue","Taro","Dusty Pink","Misty","Misty Blue","Moss Green","Soft Brown"],"158000"],
+ ["cermin","Cermin Kaca Bulat","Kaca karakter","8000","set","new",null,null,null]
+];
+
+/* Kota utama per provinsi (38 provinsi) — format "Kota, Provinsi" */
+const CITIES = [
+"Banda Aceh, Aceh","Lhokseumawe, Aceh","Langsa, Aceh","Sabang, Aceh",
+"Medan, Sumatera Utara","Binjai, Sumatera Utara","Pematangsiantar, Sumatera Utara","Tebing Tinggi, Sumatera Utara","Padang Sidempuan, Sumatera Utara","Sibolga, Sumatera Utara","Tanjungbalai, Sumatera Utara","Gunungsitoli, Sumatera Utara",
+"Padang, Sumatera Barat","Bukittinggi, Sumatera Barat","Payakumbuh, Sumatera Barat","Padang Panjang, Sumatera Barat","Pariaman, Sumatera Barat","Solok, Sumatera Barat","Sawahlunto, Sumatera Barat",
+"Pekanbaru, Riau","Dumai, Riau",
+"Batam, Kepulauan Riau","Tanjungpinang, Kepulauan Riau",
+"Jambi, Jambi","Sungai Penuh, Jambi",
+"Palembang, Sumatera Selatan","Prabumulih, Sumatera Selatan","Lubuklinggau, Sumatera Selatan","Pagar Alam, Sumatera Selatan",
+"Pangkalpinang, Kep. Bangka Belitung","Tanjung Pandan, Kep. Bangka Belitung",
+"Bengkulu, Bengkulu",
+"Bandar Lampung, Lampung","Metro, Lampung",
+"Jakarta Pusat, DKI Jakarta","Jakarta Utara, DKI Jakarta","Jakarta Barat, DKI Jakarta","Jakarta Selatan, DKI Jakarta","Jakarta Timur, DKI Jakarta","Kepulauan Seribu, DKI Jakarta",
+"Bandung, Jawa Barat","Bekasi, Jawa Barat","Depok, Jawa Barat","Bogor, Jawa Barat","Cimahi, Jawa Barat","Sukabumi, Jawa Barat","Tasikmalaya, Jawa Barat","Cirebon, Jawa Barat","Banjar, Jawa Barat","Karawang, Jawa Barat","Purwakarta, Jawa Barat","Garut, Jawa Barat","Cianjur, Jawa Barat","Kuningan, Jawa Barat","Indramayu, Jawa Barat","Sumedang, Jawa Barat","Majalengka, Jawa Barat","Subang, Jawa Barat","Cikarang, Jawa Barat",
+"Tangerang, Banten","Tangerang Selatan, Banten","Serang, Banten","Cilegon, Banten","Rangkasbitung, Banten",
+"Semarang, Jawa Tengah","Surakarta (Solo), Jawa Tengah","Salatiga, Jawa Tengah","Magelang, Jawa Tengah","Pekalongan, Jawa Tengah","Tegal, Jawa Tengah","Purwokerto, Jawa Tengah","Cilacap, Jawa Tengah","Kudus, Jawa Tengah","Jepara, Jawa Tengah","Klaten, Jawa Tengah","Kebumen, Jawa Tengah",
+"Yogyakarta, DI Yogyakarta","Sleman, DI Yogyakarta","Bantul, DI Yogyakarta","Wates, DI Yogyakarta","Wonosari, DI Yogyakarta",
+"Surabaya, Jawa Timur","Malang, Jawa Timur","Sidoarjo, Jawa Timur","Gresik, Jawa Timur","Kediri, Jawa Timur","Blitar, Jawa Timur","Madiun, Jawa Timur","Mojokerto, Jawa Timur","Pasuruan, Jawa Timur","Probolinggo, Jawa Timur","Batu, Jawa Timur","Jember, Jawa Timur","Banyuwangi, Jawa Timur","Tuban, Jawa Timur","Lamongan, Jawa Timur",
+"Denpasar, Bali","Badung, Bali","Gianyar, Bali","Singaraja, Bali","Tabanan, Bali",
+"Mataram, Nusa Tenggara Barat","Bima, Nusa Tenggara Barat","Sumbawa Besar, Nusa Tenggara Barat",
+"Kupang, Nusa Tenggara Timur","Ende, Nusa Tenggara Timur","Maumere, Nusa Tenggara Timur","Labuan Bajo, Nusa Tenggara Timur",
+"Pontianak, Kalimantan Barat","Singkawang, Kalimantan Barat",
+"Palangka Raya, Kalimantan Tengah","Sampit, Kalimantan Tengah",
+"Banjarmasin, Kalimantan Selatan","Banjarbaru, Kalimantan Selatan","Martapura, Kalimantan Selatan",
+"Samarinda, Kalimantan Timur","Balikpapan, Kalimantan Timur","Bontang, Kalimantan Timur","Tenggarong, Kalimantan Timur",
+"Tarakan, Kalimantan Utara","Tanjung Selor, Kalimantan Utara",
+"Manado, Sulawesi Utara","Bitung, Sulawesi Utara","Tomohon, Sulawesi Utara","Kotamobagu, Sulawesi Utara",
+"Gorontalo, Gorontalo",
+"Palu, Sulawesi Tengah","Luwuk, Sulawesi Tengah",
+"Mamuju, Sulawesi Barat",
+"Makassar, Sulawesi Selatan","Parepare, Sulawesi Selatan","Palopo, Sulawesi Selatan","Watampone, Sulawesi Selatan",
+"Kendari, Sulawesi Tenggara","Baubau, Sulawesi Tenggara",
+"Ambon, Maluku","Tual, Maluku",
+"Ternate, Maluku Utara","Sofifi, Maluku Utara","Tidore, Maluku Utara",
+"Jayapura, Papua","Sentani, Papua",
+"Manokwari, Papua Barat",
+"Sorong, Papua Barat Daya",
+"Nabire, Papua Tengah","Timika, Papua Tengah",
+"Wamena, Papua Pegunungan",
+"Merauke, Papua Selatan"
 ];
 
 const rp = n => "Rp" + Number(n).toLocaleString("id-ID");
-let cart = {};
+let cart = {}, CITY = "";
 try { cart = JSON.parse(localStorage.getItem("aure_cart") || "{}"); } catch(e) { cart = {}; }
-const save = () => { try { localStorage.setItem("aure_cart", JSON.stringify(cart)); } catch(e) {} };
+try { CITY = localStorage.getItem("aure_city") || ""; } catch(e) { CITY = ""; }
+const save = () => { try { localStorage.setItem("aure_cart", JSON.stringify(cart)); localStorage.setItem("aure_city", CITY); } catch(e) {} };
 
-/* ---------- catalog ---------- */
+/* ---------- promo harian: 29 produk acak per 24 jam (waktu Jakarta) ---------- */
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const dayKey = new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Jakarta"}).format(new Date());
+let seed = 0; for(const ch of dayKey) seed = (seed*31 + ch.charCodeAt(0)) >>> 0;
+const rand = mulberry32(seed);
+const order = PRODUCTS.map((_, i) => i);
+for(let i = order.length-1; i > 0; i--){ const j = Math.floor(rand()*(i+1)); [order[i],order[j]] = [order[j],order[i]]; }
+const PROMO = new Set(order.slice(0, PROMO_COUNT).map(i => PRODUCTS[i][0]));
+const wasOf = p => (p[8] && Number(p[8]) > Number(p[3])) ? Number(p[8]) : Math.max(Math.round(Number(p[3])*2/1000)*1000 - 1, 1999);
+
+/* ---------- katalog ---------- */
 const grid = document.getElementById("grid");
-function renderGrid(f){
-  const list = PRODUCTS.filter(p => f === "all" || p[4] === f);
+let curF = "all", curQ = "";
+function renderGrid(){
+  const q = curQ.trim().toLowerCase();
+  const list = PRODUCTS.filter(p =>
+    (curF === "all" || p[4] === curF) &&
+    (!q || (p[1] + " " + p[2] + " " + p[4]).toLowerCase().includes(q))
+  );
   document.getElementById("count").textContent = list.length + " PRODUK";
-  grid.innerHTML = list.map(p => `
+  if(!list.length){
+    grid.innerHTML = '<p class="noresult">Tidak ada produk yang cocok. Coba kata kunci lain ✦</p>';
+    return;
+  }
+  grid.innerHTML = list.map(p => {
+    const onPromo = PROMO.has(p[0]);
+    const w = wasOf(p);
+    const pct = Math.round((1 - Number(p[3])/w) * 100);
+    const priceHTML = onPromo
+      ? `<span class="pline"><s class="was">${rp(w)}</s><b class="disc">-${pct}%</b></span><span class="price">${rp(p[3])}</span>`
+      : `<span class="pline"></span><span class="price">${rp(p[3])}</span>`;
+    return `
     <article class="card">
       <div class="ph">
         ${p[5] === "best" ? '<span class="badge">Best Seller</span>' : ""}
@@ -539,24 +670,30 @@ function renderGrid(f){
       <div class="card-b">
         <small>${p[2]}</small>
         <h3>Auré ${p[1]}</h3>
-        <span class="price">${rp(p[3])}</span>
+        ${priceHTML}
         ${p[7] ? `<select class="sel" id="sel-${p[0]}" aria-label="Pilih warna">${p[7].map(c => `<option>${c}</option>`).join("")}</select>` : ""}
         <button class="add" onclick="add('${p[0]}', this)">+ Keranjang</button>
       </div>
-    </article>`).join("");
+    </article>`;
+  }).join("");
 }
-renderGrid("all");
+renderGrid();
 document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => {
   document.querySelectorAll(".chip").forEach(x => x.classList.remove("on"));
   c.classList.add("on");
-  renderGrid(c.dataset.f);
+  curF = c.dataset.f;
+  renderGrid();
 }));
+document.getElementById("q").addEventListener("input", e => { curQ = e.target.value; renderGrid(); });
+const filt = document.getElementById("filters");
+document.getElementById("fL").addEventListener("click", () => filt.scrollBy({left:-150, behavior:"smooth"}));
+document.getElementById("fR").addEventListener("click", () => filt.scrollBy({left:150, behavior:"smooth"}));
 
 /* ---------- marquee ---------- */
 const names = PRODUCTS.slice(0, 14).map(p => "AURÉ " + p[1].toUpperCase());
 document.getElementById("marq").innerHTML = [...names, ...names].map(n => `<span>${n} ✦</span>`).join("");
 
-/* ---------- cart (key = slug|warna) ---------- */
+/* ---------- keranjang (key = slug|warna) ---------- */
 function add(slug, btn){
   const sel = document.getElementById("sel-" + slug);
   const key = sel ? slug + "|" + sel.value : slug;
@@ -607,27 +744,52 @@ function refresh(){
     const sku = p[6] ? ` (SKU ${p[6]})` : "";
     return `${i + 1}. Auré ${p[1]}${color ? " - " + color : ""}${sku} x${q} — ${rp(Number(p[3]) * q)}`;
   });
-  const msg = `Halo Auré! Saya mau order:%0A%0A${encodeURIComponent(lines.join("\n"))}%0A%0ATotal: ${encodeURIComponent(rp(total))}%0A%0AUkuran/catatan: (isi di sini)%0AAlamat: (isi di sini)`;
+  const msg = `Halo Auré! Saya mau order:%0A%0A${encodeURIComponent(lines.join("\n"))}%0A%0ATotal: ${encodeURIComponent(rp(total))}%0AKota: ${encodeURIComponent(CITY || "-")}%0AAlamat lengkap: (isi di sini)%0AUkuran/catatan: (isi di sini)`;
   document.getElementById("wa-checkout").href = `https://wa.me/${WA_NUMBER}?text=${msg}`;
+  const lbl = document.getElementById("city-lbl"), cbtn = document.getElementById("city-btn");
+  if(CITY){ lbl.textContent = CITY; cbtn.classList.add("ok"); }
+  else { lbl.textContent = "Pilih/ketik kotamu"; cbtn.classList.remove("ok"); }
 }
 function openCart(){ document.getElementById("drawer").classList.add("open"); refresh(); }
 function closeCart(){ document.getElementById("drawer").classList.remove("open"); }
-document.getElementById("wa-checkout").addEventListener("click", function(e){
-  if(WA_NUMBER.includes("X")){ e.preventDefault(); alert("Nomor WhatsApp belum diisi. Edit WA_NUMBER di index.html ya, Rick 🙂"); return; }
-  if(!Object.keys(cart).length){ e.preventDefault(); alert("Keranjang masih kosong."); }
-  else if(typeof gtag === "function"){ gtag("event", "begin_checkout"); }
+
+/* ---------- pilih kota ---------- */
+function toggleCity(){
+  const pick = document.getElementById("city-pick");
+  pick.hidden = !pick.hidden;
+  if(!pick.hidden){ const inp = document.getElementById("city-in"); inp.value = CITY; inp.focus(); listCities(CITY); }
+}
+function listCities(q){
+  const box = document.getElementById("city-list");
+  const s = (q || "").trim().toLowerCase();
+  const hits = s ? CITIES.filter(c => c.toLowerCase().includes(s)).slice(0, 8) : CITIES.slice(0, 8);
+  box.innerHTML = hits.map(c => `<button type="button" onclick="setCity('${c.replace(/'/g,"\\'")}')">${c}</button>`).join("") ||
+    '<button type="button" onclick="setCity(document.getElementById(\'city-in\').value)">Pakai: "' + (q||"") + '"</button>';
+}
+function setCity(c){
+  CITY = c.trim();
+  save();
+  document.getElementById("city-pick").hidden = true;
+  refresh();
+}
+document.getElementById("city-in").addEventListener("input", e => listCities(e.target.value));
+document.getElementById("city-in").addEventListener("keydown", e => {
+  if(e.key === "Enter" && e.target.value.trim()){ setCity(e.target.value); }
 });
 
-/* WA links (reseller & footer) */
+document.getElementById("wa-checkout").addEventListener("click", function(e){
+  if(!Object.keys(cart).length){ e.preventDefault(); alert("Keranjang masih kosong."); return; }
+  if(!CITY){ e.preventDefault(); alert("Pilih/ketik kotamu dulu ya, biar admin bisa cek ongkir 🙂");
+    document.getElementById("city-pick").hidden = false; document.getElementById("city-in").focus(); return; }
+  if(typeof gtag === "function") gtag("event", "begin_checkout");
+});
+
+/* WA links (voucher, reseller & footer) */
 const waGeneric = `https://wa.me/${WA_NUMBER}?text=` + encodeURIComponent("Halo Auré! Saya mau tanya-tanya.");
-const waReseller = `https://wa.me/${WA_NUMBER}?text=` + encodeURIComponent("Halo Auré! Saya mau Daftar Reseller / tanya harga grosir.");
+const waReseller = `https://wa.me/${WA_NUMBER}?text=` + encodeURIComponent("Halo Auré! Saya mau Daftar Reseller / minta pricelist grosir.");
 document.getElementById("wa-foot").href = waGeneric;
 document.getElementById("wa-reseller").href = waReseller;
-[["wa-foot", waGeneric], ["wa-reseller", waReseller]].forEach(([id]) => {
-  document.getElementById(id).addEventListener("click", function(e){
-    if(WA_NUMBER.includes("X")){ e.preventDefault(); alert("Nomor WhatsApp belum diisi. Edit WA_NUMBER di index.html."); }
-  });
-});
+document.getElementById("wa-voucher").href = waReseller;
 refresh();
 
 /* ---------- game: tag diskon yang nggak bisa ditangkap ---------- */
@@ -643,16 +805,25 @@ const TAUNTS = [
   "Oke ini yang terakhir…"
 ];
 let miss = 0;
-function placeTag(){
+function placeTag(fromX, fromY){
   const w = game.clientWidth, h = game.clientHeight;
-  const x = 10 + Math.random() * (w - tag.offsetWidth - 20);
-  const y = 34 + Math.random() * (h - tag.offsetHeight - 48);
+  const maxX = Math.max(10, w - tag.offsetWidth - 20);
+  const maxY = Math.max(34, h - tag.offsetHeight - 44);
+  const cx = fromX ?? (tag.offsetLeft + tag.offsetWidth / 2);
+  const cy = fromY ?? (tag.offsetTop + tag.offsetHeight / 2);
+  const minD = Math.max(170, w * 0.4);  /* minimal ±2 jempol dari titik tap */
+  let x, y, tries = 0;
+  do {
+    x = 10 + Math.random() * (maxX - 10);
+    y = 34 + Math.random() * (maxY - 34);
+    tries++;
+  } while (Math.hypot(x - cx, y - cy) < minD && tries < 30);
   tag.style.left = x + "px";
   tag.style.top = y + "px";
 }
-function dodge(){
+function dodge(px, py){
   miss++;
-  placeTag();
+  placeTag(px, py);
   if(miss >= TAUNTS.length + 1){
     document.getElementById("gameover").classList.add("show");
     if(typeof gtag === "function") gtag("event", "game_finished");
@@ -660,13 +831,28 @@ function dodge(){
     taunt.innerHTML = TAUNTS[miss - 1] + "<small>Percobaan: " + miss + " · Berhasil: 0</small>";
   }
 }
-tag.addEventListener("pointerdown", e => { e.preventDefault(); dodge(); });
+/* kabur bahkan sebelum jari mendarat pas — deteksi tap di sekitar tag */
+game.addEventListener("pointerdown", e => {
+  const r = game.getBoundingClientRect();
+  const px = e.clientX - r.left, py = e.clientY - r.top;
+  const tx = tag.offsetLeft + tag.offsetWidth / 2, ty = tag.offsetTop + tag.offsetHeight / 2;
+  if(Math.hypot(px - tx, py - ty) < 110){ e.preventDefault(); dodge(px, py); }
+}, {passive:false});
+tag.addEventListener("pointerdown", e => { e.preventDefault(); e.stopPropagation(); dodge(); });
 tag.addEventListener("mouseenter", () => { if(matchMedia("(hover:hover)").matches) placeTag(); });
 placeTag();
-addEventListener("resize", placeTag);
-/* lompat pelan biar hidup (hormati reduced motion) */
+addEventListener("resize", () => placeTag());
+/* ikut kabur waktu layar di-scroll */
+let scrT = 0;
+addEventListener("scroll", () => {
+  const now = Date.now();
+  if(now - scrT > 300 && !document.getElementById("gameover").classList.contains("show")){
+    scrT = now; placeTag();
+  }
+}, {passive:true});
+/* lompat sendiri biar hidup (hormati reduced motion) */
 if(!matchMedia("(prefers-reduced-motion: reduce)").matches){
-  setInterval(() => { if(!document.getElementById("gameover").classList.contains("show")) placeTag(); }, 2200);
+  setInterval(() => { if(!document.getElementById("gameover").classList.contains("show")) placeTag(); }, 1600);
 }
 </script>
 </body>
