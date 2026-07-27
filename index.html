@@ -12,7 +12,7 @@
 <meta name="author" content="Aure Clothing">
 <meta name="geo.region" content="ID">
 <meta name="geo.placename" content="Indonesia">
-<meta name="theme-color" content="#EAE7DC">
+<meta name="theme-color" content="#3B0D0F">
 <link rel="canonical" href="https://aureclothing.id/">
 <link rel="alternate" hreflang="id" href="https://aureclothing.id/">
 <link rel="icon" type="image/png" href="icon.png">
@@ -45,7 +45,7 @@
   "description": "Brand fashion wanita Indonesia: atasan knit, cardigan Korean style, off shoulder top, dan celana high waist. Terbuka untuk reseller dan pembelian grosir.",
   "currenciesAccepted": "IDR",
   "paymentAccepted": "QRIS, Bank Transfer",
-  "priceRange": "Rp8.000 - Rp99.000",
+  "priceRange": "Rp52.000 - Rp99.000",
   "areaServed": {"@type": "Country", "name": "Indonesia"},
   "sameAs": [
     "https://shopee.co.id/aure.clothing",
@@ -74,19 +74,19 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,800;1,400&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --cream:#EAE7DC;   /* latar */
-  --ink:#34584C;     /* hijau logo — teks & garis */
-  --magenta:#E85A4F; /* merah — aksen kuat / diskon */
-  --pink:#E98074;    /* salmon — aksen lembut */
-  --blush:#D8C3A5;   /* tan — permukaan */
-  --grey:#8E8D8A;    /* abu — teks sekunder */
-  --white:#F7F5EF;
+  --cream:#F7F0E4;   /* ivory hangat */
+  --ink:#3B0D0F;     /* burgundy dari identitas Auré */
+  --magenta:#912D3B; /* berry — diskon & status */
+  --pink:#D6B46A;    /* antique gold */
+  --blush:#E9D9BC;   /* champagne */
+  --grey:#74645F;    /* taupe — teks sekunder */
+  --white:#FFF9EF;
   --wa:#1fae53;
-  --display:'Anton',sans-serif;
+  --display:'Cormorant Garamond',serif;
   --body:'Archivo',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -104,7 +104,7 @@ h1,h2,h3,.disp{font-family:var(--display);font-weight:400;text-transform:upperca
 /* ---------- header ---------- */
 header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3px solid var(--ink)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;gap:10px}
-.logo{height:30px;width:auto}
+.logo{height:30px;width:auto;filter:brightness(0) saturate(100%) invert(75%) sepia(37%) saturate(635%) hue-rotate(359deg) brightness(91%) contrast(88%)}
 .nav-links{display:flex;gap:14px;align-items:center;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
 .nav-links a{text-decoration:none}
 .nav-links a:hover{color:var(--magenta)}
@@ -112,6 +112,7 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 .cart-btn{background:var(--ink);color:var(--cream);border:none;padding:8px 14px;font-weight:800;font-size:13px;letter-spacing:.05em;display:flex;gap:7px;align-items:center}
 .cart-btn:hover{background:var(--magenta)}
 .cart-btn b{background:var(--pink);color:var(--ink);border-radius:99px;min-width:20px;height:20px;display:grid;place-items:center;font-size:12px;padding:0 5px}
+.nav-cart{white-space:nowrap}
 
 /* ---------- hero ---------- */
 .hero{display:grid;grid-template-columns:1fr;border-bottom:3px solid var(--ink)}
@@ -122,6 +123,7 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 .hero h1 em{font-style:normal;color:var(--magenta)}
 .hero p{max-width:46ch;font-size:15px;margin-bottom:24px}
 .cta-row{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch}
+.hero h1{font-size:clamp(40px,7vw,72px)}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;font-weight:800;font-size:14px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:3px solid var(--ink);transition:transform .12s ease}
 .btn:active{transform:translateY(2px)}
 .btn-solid{background:var(--ink);color:var(--cream)}
@@ -130,17 +132,19 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 .btn-line:hover{background:var(--blush)}
 .btn-green{background:var(--wa);border-color:var(--wa);color:#fff}
 .btn-green:hover{background:#178a42;border-color:#178a42}
-.btn-tt{display:inline-flex;align-items:center;justify-content:center;border:3px solid var(--ink);background:var(--white);padding:8px 14px}
-.btn-tt img{height:30px;width:auto}
-.btn-tt:hover{background:var(--blush)}
 .hero-vis{position:relative;min-height:280px;background:
-  linear-gradient(rgba(52,88,76,.72),rgba(52,88,76,.5)),
-  radial-gradient(circle at 30% 20%, #D8C3A5 0%, #6f8f82 45%, #34584C 100%);
+  linear-gradient(rgba(59,13,15,.16),rgba(59,13,15,.28)),
+  radial-gradient(circle at 30% 20%, #E9D9BC 0%, #7A3539 45%, #3B0D0F 100%);
   overflow:hidden;display:grid;place-items:center}
 .hero-vis::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(234,231,220,.35) 1.2px,transparent 1.2px);background-size:8px 8px;mix-blend-mode:overlay}
-.hero-vis img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:luminosity;opacity:.85}
-.hero-vis .disp{position:relative;color:var(--cream);font-size:clamp(60px,16vw,150px);opacity:.28;transform:rotate(-6deg);user-select:none}
-.hero-note{position:absolute;bottom:12px;right:14px;font-size:11px;color:var(--cream);opacity:.8;letter-spacing:.1em;text-transform:uppercase}
+.hero-vis img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.96}
+
+/* ---------- conversion benefits ---------- */
+.benefits{background:var(--pink);border-bottom:3px solid var(--ink)}
+.benefits-in{display:grid;grid-template-columns:1fr;padding:0}
+.benefit{padding:13px 16px;border-bottom:1px solid rgba(59,13,15,.35);font-size:12.5px;font-weight:800;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px}
+.benefit svg{width:18px;height:18px;flex:0 0 auto}
+.benefit:last-child{border-bottom:0}
 
 /* ---------- marquee ---------- */
 .marq{background:var(--ink);color:var(--cream);overflow:hidden;border-bottom:3px solid var(--ink)}
@@ -156,12 +160,11 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 .game-head p{font-size:13px;font-weight:600}
 .game{position:relative;width:100%;aspect-ratio:1600/250;min-height:190px;max-height:260px;background:var(--ink);border:3px solid var(--ink);overflow:hidden;touch-action:manipulation}
 .game::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(233,128,116,.4) 1.5px,transparent 1.5px);background-size:14px 14px}
-.hole{position:absolute;bottom:8%;width:54px;height:14px;background:#22392f;border-radius:50%;box-shadow:inset 0 3px 5px rgba(0,0,0,.6)}
 #tag{position:absolute;border:none;background:var(--pink);color:var(--ink);font-family:var(--display);font-size:22px;padding:8px 16px;transform:rotate(-4deg);box-shadow:4px 4px 0 var(--magenta);transition:left .08s linear,top .08s linear;user-select:none;touch-action:none}
 #tag::after{content:"";position:absolute;left:-6px;top:50%;width:10px;height:10px;background:var(--cream);border-radius:50%;transform:translateY(-50%)}
 #taunt{position:absolute;top:10px;left:12px;right:12px;color:var(--cream);font-weight:800;font-size:clamp(13px,3.5vw,17px);letter-spacing:.03em;text-transform:uppercase}
 #taunt small{display:block;font-weight:500;text-transform:none;letter-spacing:0;opacity:.75;font-size:12px}
-.game-over{position:absolute;inset:0;background:rgba(52,88,76,.95);display:none;place-items:center;text-align:center;padding:16px}
+.game-over{position:absolute;inset:0;background:rgba(59,13,15,.96);display:none;place-items:center;text-align:center;padding:16px}
 .game-over.show{display:grid}
 .game-over p{color:var(--cream);font-family:var(--display);font-size:clamp(17px,4.5vw,30px);margin-bottom:12px;text-transform:uppercase}
 .game-over .btn{border-color:var(--pink);background:var(--pink);color:var(--ink);padding:10px 16px;font-size:13px}
@@ -174,6 +177,10 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 .v-card h3{font-size:22px;color:var(--magenta)}
 .v-card p{font-size:14px;max-width:52ch}
 .v-card .btn{padding:10px 16px;font-size:13px}
+.v-card.eligible{border-style:solid;background:linear-gradient(145deg,var(--white),var(--blush))}
+.v-card.claimed{border-style:solid;background:var(--ink);color:var(--cream)}
+.v-card.claimed h3{color:var(--pink)}
+.v-note{grid-column:1/-1;border:2px solid var(--ink);background:var(--blush);padding:14px 16px;font-size:13px;font-weight:700}
 
 /* ---------- catalog ---------- */
 .cat-sec{padding:44px 0 30px}
@@ -181,6 +188,7 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 .sec-head h2{font-size:clamp(34px,8vw,64px)}
 .sec-head .idx{font-family:var(--display);color:var(--magenta);font-size:14px;letter-spacing:.15em}
 .sec-sub{font-size:14px;max-width:62ch;margin-bottom:18px;padding-left:12px}
+.catalog-tools{position:sticky;top:53px;z-index:40;width:100%;background:rgba(247,240,228,.97);margin:0 0 18px;padding:10px 12px 1px;border:2px solid var(--ink);box-shadow:0 5px 12px rgba(59,13,15,.09);backdrop-filter:blur(8px)}
 .filter-row{display:flex;align-items:center;gap:6px;margin-bottom:10px}
 .f-arr{flex:0 0 auto;border:2px solid var(--ink);background:var(--white);width:34px;height:38px;font-size:18px;font-weight:800;color:var(--ink)}
 .f-arr:hover{background:var(--blush)}
@@ -190,7 +198,7 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 .chip.on{background:var(--ink);color:var(--cream)}
 .chip:hover{background:var(--blush)}
 .chip.on:hover{background:var(--ink)}
-.search-row{display:flex;gap:8px;margin-bottom:18px}
+.search-row{display:flex;gap:8px;margin-bottom:9px}
 .search-row input{flex:1;border:2px solid var(--ink);background:var(--white);padding:11px 14px;font-family:var(--body);font-size:14px;color:var(--ink)}
 .search-row input::placeholder{color:var(--grey)}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
@@ -212,7 +220,7 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 .sel{margin-top:8px;border:2px solid var(--ink);background:var(--white);color:var(--ink);padding:8px;font-family:var(--body);font-weight:600;font-size:13px;width:100%}
 .size-link{margin-top:6px;background:none;border:none;padding:0;font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--magenta);text-decoration:underline;text-underline-offset:3px;justify-self:start;align-self:start}
 .size-link:hover{color:var(--ink)}
-.lb{position:fixed;inset:0;z-index:90;background:rgba(52,88,76,.9);display:none;place-items:center;padding:18px}
+.lb{position:fixed;inset:0;z-index:90;background:rgba(59,13,15,.9);display:none;place-items:center;padding:18px}
 .lb.open{display:grid}
 .lb-in{width:min(460px,92vw);background:var(--cream);border:3px solid var(--ink)}
 .lb-h{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;border-bottom:3px solid var(--ink)}
@@ -264,7 +272,7 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 /* ---------- footer ---------- */
 footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
 .foot{display:grid;gap:22px}
-.logo-f{height:40px;width:auto;filter:brightness(0) invert(96%) sepia(4%) saturate(300%) hue-rotate(10deg)}
+.logo-f{height:40px;width:auto;filter:brightness(0) saturate(100%) invert(75%) sepia(37%) saturate(635%) hue-rotate(359deg) brightness(91%) contrast(88%)}
 .foot-links{display:grid;gap:8px;font-size:14px}
 .foot-links a{text-decoration:none;font-weight:600}
 .foot-links a:hover{color:var(--pink)}
@@ -275,7 +283,7 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
 .fab b{background:var(--ink);color:var(--cream);border-radius:99px;min-width:22px;height:22px;display:grid;place-items:center;font-size:12px;padding:0 6px}
 .drawer{position:fixed;inset:0;z-index:70;display:none}
 .drawer.open{display:block}
-.drawer .bg{position:absolute;inset:0;background:rgba(52,88,76,.55)}
+.drawer .bg{position:absolute;inset:0;background:rgba(59,13,15,.55)}
 .panel{position:absolute;right:0;top:0;bottom:0;width:min(420px,92vw);background:var(--cream);border-left:3px solid var(--ink);display:flex;flex-direction:column}
 .panel-h{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:3px solid var(--ink)}
 .panel-h h3{font-size:22px}
@@ -293,6 +301,19 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
 .panel-f{border-top:3px solid var(--ink);padding:14px 16px;display:grid;gap:10px;background:var(--white)}
 .tot{display:flex;justify-content:space-between;font-weight:800;font-size:15px}
 .tot b{font-family:var(--display);font-size:22px}
+.checkout-field{width:100%;border:2px dashed var(--ink);background:var(--cream);padding:11px 12px;font-family:var(--body);font-weight:700;font-size:13px;color:var(--ink)}
+.checkout-field:focus{outline:none;border-style:solid;background:var(--white)}
+.checkout-field.ok{border-style:solid;background:var(--blush)}
+.price-summary{display:grid;gap:5px;border-top:1px solid var(--blush);padding-top:9px}
+.sum-row{display:flex;justify-content:space-between;font-size:13px}
+.sum-row[hidden]{display:none}
+.sum-row.discount{color:var(--magenta);font-weight:800}
+.promo-status{display:grid;gap:6px}
+.promo-progress{border:1px solid var(--blush);padding:9px 10px;font-size:12px;font-weight:700;background:var(--cream)}
+.promo-item{display:flex;align-items:center;justify-content:space-between;gap:14px;border:2px solid var(--pink);padding:10px 11px;font-size:12.5px;background:#fff8e5}
+.promo-left{display:flex;align-items:center;gap:7px;min-width:0}
+.tick-icon{width:17px;height:17px;flex:0 0 auto;color:var(--ink)}
+.promo-item>span:last-child{text-align:right;font-weight:800}
 .city-wrap{position:relative}
 .city-in{width:100%;border:2px dashed var(--ink);background:var(--cream);padding:11px 12px;font-family:var(--body);font-weight:700;font-size:13px;color:var(--ink)}
 .city-in:focus{outline:none;border-style:solid;background:var(--white)}
@@ -301,16 +322,35 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
 .city-list button{display:block;width:100%;text-align:left;background:none;border:none;border-bottom:1px solid var(--blush);padding:10px 12px;font-size:13.5px;font-weight:600;color:var(--ink)}
 .city-list button:hover{background:var(--blush)}
 .wa-btn{background:var(--wa);color:#fff;border:3px solid var(--ink);padding:14px;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.04em;text-align:center;text-decoration:none}
+.checkout-safe{font-size:11.5px;line-height:1.4;color:var(--grey);text-align:center}
+
+/* ---------- marketplace modal ---------- */
+.market-modal{position:fixed;inset:0;z-index:85;background:rgba(59,13,15,.64);display:none;place-items:center;padding:18px}
+.market-modal.open{display:grid}
+.market-box{width:min(430px,94vw);background:var(--cream);border:3px solid var(--ink);box-shadow:8px 8px 0 rgba(59,13,15,.28)}
+.market-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px 10px}
+.market-head h3{font-size:25px}
+.market-head button{border:0;background:transparent;color:var(--ink);font-size:25px;line-height:1}
+.market-box>p{padding:0 18px 14px;font-size:13px;color:var(--grey)}
+.market-links{display:grid;gap:10px;padding:0 18px 18px}
+.market-link{display:flex;align-items:center;justify-content:space-between;gap:16px;border:2px solid var(--ink);background:var(--white);padding:13px 14px;text-decoration:none;font-weight:800}
+.market-link:hover{border-color:var(--magenta);background:var(--blush)}
+.market-link small{font-size:11px;color:var(--grey);text-align:right;font-weight:600}
+.market-star{color:var(--pink);font-size:14px;line-height:1}
 
 /* ---------- desktop ---------- */
 @media(min-width:760px){
   .nav{padding:12px 24px}
   .logo{height:36px}
+  .catalog-tools{top:63px}
   .nav-links .hide-m{display:inline}
   .hero{grid-template-columns:1.1fr 1fr}
   .hero-txt{padding:70px 40px 60px}
   .hero-vis{min-height:0;border-left:3px solid var(--ink)}
-  .vch-grid{grid-template-columns:1fr 1fr}
+  .benefits-in{grid-template-columns:repeat(3,1fr)}
+  .benefit{border-bottom:0;border-right:1px solid rgba(59,13,15,.35)}
+  .benefit:last-child{border-right:0}
+  .vch-grid{grid-template-columns:repeat(3,1fr)}
   .grid{grid-template-columns:repeat(4,1fr);gap:18px}
   .order-grid{grid-template-columns:repeat(3,1fr)}
   .qris-box{grid-template-columns:auto 1fr;gap:26px}
@@ -334,6 +374,7 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
       <a href="#cara-order" class="hide-m">Cara Order</a>
       <a href="#reseller">Reseller</a>
     </nav>
+    <button class="cart-btn nav-cart" type="button" onclick="openCart()" aria-label="Buka keranjang belanja">Keranjang <b id="cnt-head">0</b></button>
   </div>
 </header>
 
@@ -341,19 +382,25 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
 <section class="hero">
   <div class="hero-txt">
     <div class="dots" aria-hidden="true"></div>
-    <p class="eyebrow">Elevated. Essentials. For Daily Wear</p>
-    <h1>Stay classy<br>in <em>timeless</em><br>classics.</h1>
-    <p>Atasan knit, cardigan, dan celana high waist yang bikin kamu percaya diri sepanjang hari. Dikirim langsung dari warehouse Auré di Jakarta.</p>
+    <p class="eyebrow">Classy Knitwear · Comfy Pants · from Jakarta</p>
+    <h1>Tampil rapi.<br>Tetap <em>nyaman</em><br>seharian.</h1>
+    <p>Pilih atasan knit, cardigan, dan celana high waist dalam warna yang mudah dipadukan. Checkout langsung via WhatsApp, lalu admin kami konfirmasi pesananmu.</p>
     <div class="cta-row">
-      <a class="btn btn-solid" href="#katalog">Lihat Katalog</a>
-      <a class="btn btn-line" href="https://shopee.co.id/aure.clothing" target="_blank" rel="noopener">Belanja di Shopee</a>
-      <a class="btn-tt" href="https://www.tiktok.com/@aureclothing_" target="_blank" rel="noopener" aria-label="Aure Clothing di TikTok"><img src="tiktok.png" alt="TikTok"></a>
+      <a class="btn btn-solid" href="#katalog">Lihat Koleksi</a>
+      <a class="btn btn-line" href="#voucher">Klaim Voucher</a>
+      <button class="btn btn-line" type="button" onclick="openMarketplace()">Marketplace</button>
     </div>
   </div>
   <div class="hero-vis" aria-hidden="true">
-    <img src="hero.jpg" alt="" onerror="this.remove()">
-    <span class="disp">AURÉ</span>
-    <span class="hero-note">Koleksi 2026</span>
+    <img src="aure-brand-reference.jpeg" alt="" onerror="this.remove()">
+  </div>
+</section>
+
+<section class="benefits" aria-label="Promo utama">
+  <div class="wrap benefits-in">
+    <div class="benefit"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 1 1 2.5-2.5L12 7Zm0 0h4.5A2.5 2.5 0 1 0 14 4.5L12 7Z"/></svg><span>FREE GIFT</span></div>
+    <div class="benefit">GRATIS ONGKIR - JABODETABEK</div>
+    <div class="benefit">VOUCHER UP TO 50K OFF</div>
   </div>
 </section>
 
@@ -370,16 +417,11 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
       <p>Tap tag <strong>-50%</strong> kalau bisa. Serius, coba aja.</p>
     </div>
     <div class="game" id="game" aria-label="Mini game: tangkap tag diskon">
-      <p id="taunt">Diskonnya di situ tuh 👀<small>Skor kamu: 0. Bukan salah kamu kok.</small></p>
-      <div class="hole" style="left:8%"></div>
-      <div class="hole" style="left:28%"></div>
-      <div class="hole" style="left:48%"></div>
-      <div class="hole" style="left:68%"></div>
-      <div class="hole" style="left:86%"></div>
+      <p id="taunt">Diskonnya di situ tuh<small>Skor kamu: 0. Bukan salah kamu kok.</small></p>
       <button id="tag" aria-label="Tag diskon 50 persen">-50%</button>
       <div class="game-over" id="gameover">
         <div>
-          <p>Yaudah… diskonnya ga lari lagi 😌</p>
+          <p>Yaudah… diskonnya ga lari lagi.</p>
           <a class="btn" href="#voucher">Ambil Diskon di Sini →</a>
         </div>
       </div>
@@ -393,20 +435,22 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
     <h2>Katalog</h2>
     <span class="idx" id="count"></span>
   </div>
-  <p class="sec-sub">Setiap potongan Auré lahir dari satu prinsip: pakaian harian harus terasa istimewa. Knit premium yang jatuhnya rapi di badan, siluet yang memuji bentuk tubuh, dan warna-warna yang mudah dipadukan — dibuat untuk dipakai berulang kali dan tetap terlihat effortless, dari jam kerja sampai akhir pekan.</p>
-  <div class="filter-row">
-    <button class="f-arr" id="fL" aria-label="Geser kategori ke kiri">‹</button>
-    <div class="filters" id="filters" role="tablist" aria-label="Filter kategori">
-      <button class="chip on" data-f="all">Semua</button>
-      <button class="chip" data-f="atasan">Atasan</button>
-      <button class="chip" data-f="cardigan">Cardigan</button>
-      <button class="chip" data-f="celana">Celana</button>
-      <button class="chip" data-f="set">Set &amp; Aksesoris</button>
+  <p class="sec-sub">Pilih model dan warna favoritmu, lalu tambahkan langsung ke keranjang. Foto warna akan tampil otomatis setelah seluruh aset warna diunggah.</p>
+  <div class="catalog-tools">
+    <div class="filter-row">
+      <button class="f-arr" id="fL" aria-label="Geser kategori ke kiri">‹</button>
+      <div class="filters" id="filters" role="tablist" aria-label="Filter kategori">
+        <button class="chip on" data-f="all">Semua</button>
+        <button class="chip" data-f="atasan">Atasan</button>
+        <button class="chip" data-f="cardigan">Cardigan</button>
+        <button class="chip" data-f="celana">Celana</button>
+        <button class="chip" data-f="set">Set &amp; Aksesoris</button>
+      </div>
+      <button class="f-arr" id="fR" aria-label="Geser kategori ke kanan">›</button>
     </div>
-    <button class="f-arr" id="fR" aria-label="Geser kategori ke kanan">›</button>
-  </div>
-  <div class="search-row">
-    <input type="search" id="q" placeholder="🔍 Cari produk… (mis. cardigan, off shoulder, celana)" aria-label="Cari produk">
+    <div class="search-row">
+      <input type="search" id="q" placeholder="Cari produk… (mis. cardigan, off shoulder, celana)" aria-label="Cari produk">
+    </div>
   </div>
   <div class="grid" id="grid"></div>
 </main>
@@ -417,8 +461,8 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
     <h2>Cara order <em>di sini</em></h2>
     <p style="opacity:.85;font-size:14.5px;max-width:60ch">Belanja lewat website lebih hemat — tanpa potongan platform, jadi kami bisa kasih harga &amp; bonus terbaik.</p>
     <div class="order-grid">
-      <div class="step"><span class="n">1</span><h3>Pilih produk</h3><p>Tap "+ Keranjang" di katalog, pilih warna dan atur jumlahnya.</p></div>
-      <div class="step"><span class="n">2</span><h3>Checkout via WhatsApp</h3><p>Isi kotamu, lalu pesananmu otomatis terformat rapi ke admin kami.</p></div>
+      <div class="step"><span class="n">1</span><h3>Pilih produk</h3><p>Pilih warna, tap "Keranjang", lalu atur jumlahnya.</p></div>
+      <div class="step"><span class="n">2</span><h3>Checkout via WhatsApp</h3><p>Isi nama dan kotamu, lalu pesananmu otomatis terformat rapi ke admin kami.</p></div>
       <div class="step"><span class="n">3</span><h3>Bayar pakai QRIS</h3><p>Scan sekali dari aplikasi bank / e-wallet apa pun. Pesanan langsung diproses.</p></div>
     </div>
     <div class="qris-box">
@@ -437,15 +481,21 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
     <h2>Voucher &amp; Promo</h2>
     <div class="vch-grid">
       <div class="v-card">
-        <h3>Daily Picks</h3>
-        <p>Diskon sampai -70% untuk produk yang paling banyak dicari hari ini. Ayo checkout sebelum ketinggalan.</p>
-        <a class="btn btn-solid" href="#katalog">Cek Produk Hari Ini</a>
+        <h3>Rp10.000 OFF</h3>
+        <p>Minimum belanja Rp150.000. Klaim setelah isi keranjang; satu voucher per pesanan.</p>
+        <button class="btn btn-solid voucher-btn" type="button" data-voucher="AURE10" onclick="claimVoucher('AURE10')">Klaim Voucher</button>
       </div>
       <div class="v-card">
-        <h3>Gratis Ongkir Rp10.000,-</h3>
-        <p>Untuk pembeli area JABODETABEK dengan pembelian minimum 3 (tiga) pcs.</p>
-        <a class="btn btn-green" id="wa-voucher" href="#" target="_blank" rel="noopener">Klaim via WhatsApp</a>
+        <h3>Rp25.000 OFF</h3>
+        <p>Minimum belanja Rp250.000. Klaim setelah isi keranjang; satu voucher per pesanan.</p>
+        <button class="btn btn-solid voucher-btn" type="button" data-voucher="AURE25" onclick="claimVoucher('AURE25')">Klaim Voucher</button>
       </div>
+      <div class="v-card">
+        <h3>Rp50.000 OFF</h3>
+        <p>Minimum belanja Rp400.000. Klaim setelah isi keranjang; satu voucher per pesanan.</p>
+        <button class="btn btn-solid voucher-btn" type="button" data-voucher="AURE50" onclick="claimVoucher('AURE50')">Klaim Voucher</button>
+      </div>
+      <p class="v-note">Otomatis saat checkout: Free Gift (Cermin Bulat) untuk belanja di atas Rp100.000, serta Gratis Ongkir hingga Rp10.000 untuk minimum 3 item ke Jakarta, Bogor, Depok, Tangerang, atau Bekasi.</p>
     </div>
   </div>
 </section>
@@ -473,7 +523,7 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
   <h2>Tanya-tanya dulu</h2>
   <details>
     <summary>Bagaimana cara order dari website ini?</summary>
-    <p>Pilih produk di katalog, masukkan ke keranjang, isi kotamu, lalu tap "Checkout via WhatsApp". Pesananmu terkirim otomatis ke admin kami untuk konfirmasi ukuran, stok, dan ongkos kirim.</p>
+    <p>Pilih produk di katalog, masukkan ke keranjang, isi nama dan kotamu, lalu tap "Checkout via WhatsApp". Pesananmu terkirim otomatis ke admin kami untuk konfirmasi ukuran, stok, dan ongkos kirim.</p>
   </details>
   <details>
     <summary>Metode pembayaran apa saja yang tersedia?</summary>
@@ -491,6 +541,10 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
     <summary>Berapa lama pengiriman?</summary>
     <p>Pesanan yang dibayar sebelum jam 3 sore dikirim di hari yang sama (Senin–Sabtu) dari warehouse kami di Jakarta. Estimasi tiba 1–5 hari kerja tergantung kota tujuan.</p>
   </details>
+  <details>
+    <summary>Bagaimana promo otomatis dan voucher diterapkan?</summary>
+    <p>Free Gift (Cermin Bulat) otomatis masuk untuk nilai produk di atas Rp100.000. Gratis Ongkir hingga Rp10.000 otomatis ditandai untuk minimum 3 item ke area Jakarta, Bogor, Depok, Tangerang, atau Bekasi. Voucher potongan dipilih satu per pesanan dan langsung mengurangi total produk di keranjang.</p>
+  </details>
 
   <div class="seo-copy">
     <h3>Aure Clothing — Atasan Knit &amp; Cardigan Wanita Korean Style</h3>
@@ -505,7 +559,7 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
     <div class="foot-links">
       <a href="https://shopee.co.id/aure.clothing" target="_blank" rel="noopener">Shopee — aure.clothing</a>
       <a href="https://www.tiktok.com/@aureclothing_" target="_blank" rel="noopener">TikTok — @aureclothing_</a>
-      <a href="https://wa.me/6285705923862" target="_blank" rel="noopener">Hesti 0857-0592-3862</a>
+      <a href="https://wa.me/6285705923862" target="_blank" rel="noopener">Customer Service — Hesti</a>
       <a href="mailto:info@aureclothing.id">info@aureclothing.id</a>
       <a href="#reseller">Reseller &amp; Grosir</a>
     </div>
@@ -524,6 +578,21 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
   </div>
 </div>
 
+<!-- ============ MARKETPLACE MODAL ============ -->
+<div class="market-modal" id="market-modal" aria-hidden="true" onclick="if(event.target===this)closeMarketplace()">
+  <div class="market-box" role="dialog" aria-modal="true" aria-labelledby="market-title">
+    <div class="market-head">
+      <h3 id="market-title">Marketplace</h3>
+      <button type="button" onclick="closeMarketplace()" aria-label="Tutup marketplace">×</button>
+    </div>
+    <p>Kunjungi Auré Clothing di Marketplace Resmi:</p>
+    <div class="market-links">
+      <a class="market-link" href="https://shopee.co.id/aure.clothing" target="_blank" rel="noopener"><span>Shopee</span><small>aure.clothing · 4.97/5 <span class="market-star" aria-label="bintang">★</span></small></a>
+      <a class="market-link" href="https://www.tiktok.com/@aureclothing_" target="_blank" rel="noopener"><span>TikTok</span><small>@aureclothing_</small></a>
+    </div>
+  </div>
+</div>
+
 <!-- ============ CART ============ -->
 <button class="fab" onclick="openCart()" aria-label="Buka keranjang belanja">Keranjang <b id="cnt-fab">0</b></button>
 <div class="drawer" id="drawer" aria-hidden="true">
@@ -535,12 +604,19 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
     </div>
     <div class="items" id="items"></div>
     <div class="panel-f">
-      <div class="tot"><span>Total</span><b id="total">Rp0</b></div>
+      <input id="name-in" class="checkout-field" placeholder="Nama pelanggan (wajib)" autocomplete="name" aria-label="Nama pelanggan">
       <div class="city-wrap">
-        <input id="city-in" class="city-in" placeholder="📍 Ketik Kotamu… (wajib)" autocomplete="off" aria-label="Ketik kotamu">
+        <input id="city-in" class="city-in" placeholder="Ketik kotamu… (wajib)" autocomplete="off" aria-label="Ketik kotamu">
         <div class="city-list" id="city-list" hidden></div>
       </div>
+      <div class="promo-status" id="promo-status" aria-live="polite"></div>
+      <div class="price-summary">
+        <div class="sum-row"><span>Subtotal produk</span><span id="subtotal">Rp0</span></div>
+        <div class="sum-row discount" id="discount-row" hidden><span id="discount-label">Voucher</span><span id="discount">−Rp0</span></div>
+        <div class="tot"><span>Total sementara</span><b id="total">Rp0</b></div>
+      </div>
       <a class="wa-btn" id="wa-checkout" href="#" target="_blank" rel="noopener">Checkout via WhatsApp</a>
+      <p class="checkout-safe">Belum ada pembayaran otomatis. Admin akan mengonfirmasi stok, ongkir, dan total akhir melalui WhatsApp.</p>
     </div>
   </div>
 </div>
@@ -550,8 +626,9 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
    KONFIGURASI
    - Foto produk: upload ke folder /products dengan nama {slug}-1.jpg
      (slug = kolom pertama di PRODUCTS). Foto otomatis muncul.
-   - Kolom terakhir = harga coret (was). null = pakai perkiraan 2x.
-   - PROMO_COUNT produk acak per hari tampil dengan harga coret.
+   - Kolom terakhir dipertahankan sebagai data lama; harga coret dihitung ulang
+     ke kelipatan Rp5.000 agar diskon harian tetap di kisaran 30–40%.
+   - PROMO_COUNT produk acak per hari tampil dengan harga diskon.
    ================================================================== */
 const WA_NUMBER = "628216300393";
 const SHOPEE = "https://shopee.co.id/aure.clothing";
@@ -596,8 +673,7 @@ const PRODUCTS = [
  ["lula","Lula Crop Top","Square neck brukat","66300","atasan","new","A04",["Sky Blue","Dusty Pink","Misty","Soft Brown"],"120000"],
  ["arumi","Arumi Top","Ruched lengan panjang","72700","atasan","new","A36",["Hitam","Misty","Taro","Moss Green","Misty Blue","Dusty Pink","Soft Brown","Maroon","Dark Choco","Putih"],"175300"],
  ["seara","Seara Top","Off shoulder Korean","74800","atasan","new","A11",["Misty Blue","Moss Green","Soft Brown","Taro","Dusty Pink","Misty"],"171000"],
- ["rose","Rose Knit Top","Off shoulder premium","68900","atasan","new","A15",["Baby Blue","Taro","Dusty Pink","Misty","Misty Blue","Moss Green","Soft Brown"],"158000"],
- ["cermin","Cermin Kaca Bulat","Kaca karakter","8000","set","new",null,null,null]
+ ["rose","Rose Knit Top","Off shoulder premium","68900","atasan","new","A15",["Baby Blue","Taro","Dusty Pink","Misty","Misty Blue","Moss Green","Soft Brown"],"158000"]
 ];
 
 /* Kota utama per provinsi (38 provinsi) — format "Kota, Provinsi" */
@@ -643,10 +719,24 @@ const CITIES = [
 ];
 
 const rp = n => "Rp" + Number(n).toLocaleString("id-ID");
-let cart = {}, CITY = "";
+const VOUCHERS = {
+  AURE10:{threshold:150000, discount:10000, label:"Rp10.000 OFF"},
+  AURE25:{threshold:250000, discount:25000, label:"Rp25.000 OFF"},
+  AURE50:{threshold:400000, discount:50000, label:"Rp50.000 OFF"}
+};
+const JABODETABEK = /\b(jakarta|bogor|depok|tangerang|bekasi)\b/i;
+const TICK_ICON = '<svg class="tick-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 2.5 2.5L16 9"></path></svg>';
+let cart = {}, CITY = "", CUSTOMER_NAME = "", CLAIMED_VOUCHER = "";
 try { cart = JSON.parse(localStorage.getItem("aure_cart") || "{}"); } catch(e) { cart = {}; }
 try { CITY = localStorage.getItem("aure_city") || ""; } catch(e) { CITY = ""; }
-const save = () => { try { localStorage.setItem("aure_cart", JSON.stringify(cart)); localStorage.setItem("aure_city", CITY); } catch(e) {} };
+try { CUSTOMER_NAME = localStorage.getItem("aure_customer_name") || ""; } catch(e) { CUSTOMER_NAME = ""; }
+try { CLAIMED_VOUCHER = localStorage.getItem("aure_voucher") || ""; } catch(e) { CLAIMED_VOUCHER = ""; }
+const save = () => { try {
+  localStorage.setItem("aure_cart", JSON.stringify(cart));
+  localStorage.setItem("aure_city", CITY);
+  localStorage.setItem("aure_customer_name", CUSTOMER_NAME);
+  localStorage.setItem("aure_voucher", CLAIMED_VOUCHER);
+} catch(e) {} };
 
 /* ---------- promo harian: 29 produk acak per 24 jam (waktu Jakarta) ---------- */
 function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
@@ -656,7 +746,8 @@ const rand = mulberry32(seed);
 const order = PRODUCTS.map((_, i) => i);
 for(let i = order.length-1; i > 0; i--){ const j = Math.floor(rand()*(i+1)); [order[i],order[j]] = [order[j],order[i]]; }
 const PROMO = new Set(order.slice(0, PROMO_COUNT).map(i => PRODUCTS[i][0]));
-const wasOf = p => (p[8] && Number(p[8]) > Number(p[3])) ? Number(p[8]) : Math.max(Math.round(Number(p[3])*2/1000)*1000 - 1, 1999);
+/* harga coret dibulatkan ke atas per Rp5.000; hasil diskon aktual 30–40% */
+const wasOf = p => Math.ceil((Number(p[3]) / 0.65) / 5000) * 5000;
 /* harga efektif: produk promo = harga diskon; di luar promo = harga asli (coret) */
 const eff = p => PROMO.has(p[0]) ? Number(p[3]) : wasOf(p);
 
@@ -732,7 +823,7 @@ function renderGrid(){
         ${priceHTML}
         ${p[7] ? `<select class="sel" id="sel-${p[0]}" aria-label="Pilih warna" onchange="swapImg('${p[0]}')">${p[7].map(c => `<option>${c}</option>`).join("")}</select>` : ""}
         <button class="size-link" onclick="openSize('${p[0]}','${p[1].replace(/'/g,"")}')">Size</button>
-        <button class="add" onclick="add('${p[0]}', this)">+ Keranjang</button>
+        <button class="add" onclick="add('${p[0]}', this)">Keranjang</button>
       </div>
     </article>`;
   }).join("");
@@ -759,21 +850,67 @@ function add(slug, btn){
   const key = sel ? slug + "|" + sel.value : slug;
   cart[key] = (cart[key] || 0) + 1;
   save(); refresh();
-  if(btn){ btn.textContent = "Masuk ✓"; btn.classList.add("done");
-    setTimeout(() => { btn.textContent = "+ Keranjang"; btn.classList.remove("done"); }, 900); }
+  const product = PRODUCTS.find(p => p[0] === slug);
+  if(typeof gtag === "function" && product) gtag("event", "add_to_cart", {
+    currency:"IDR", value:eff(product), items:[{item_id:slug,item_name:product[1],item_variant:sel ? sel.value : "",price:eff(product),quantity:1}]
+  });
+  if(btn){ btn.textContent = "Sudah Ditambahkan"; btn.classList.add("done");
+    setTimeout(() => { btn.textContent = "Keranjang"; btn.classList.remove("done"); }, 900); }
 }
 function setQty(key, d){
   cart[key] = (cart[key] || 0) + d;
   if(cart[key] <= 0) delete cart[key];
   save(); refresh();
 }
+function getEntries(){
+  return Object.entries(cart).filter(([key, qty]) => {
+    const slug = key.split("|")[0];
+    const valid = PRODUCTS.some(p => p[0] === slug) && Number(qty) > 0;
+    if(!valid) delete cart[key];
+    return valid;
+  });
+}
+function cartSubtotal(entries = getEntries()){
+  return entries.reduce((sum, [key, qty]) => {
+    const slug = key.split("|")[0];
+    return sum + eff(PRODUCTS.find(p => p[0] === slug)) * qty;
+  }, 0);
+}
+function claimVoucher(code){
+  const voucher = VOUCHERS[code];
+  const subtotal = cartSubtotal();
+  if(!voucher) return;
+  if(subtotal < voucher.threshold){
+    alert(`Tambah ${rp(voucher.threshold - subtotal)} lagi untuk klaim ${voucher.label}.`);
+    return;
+  }
+  CLAIMED_VOUCHER = CLAIMED_VOUCHER === code ? "" : code;
+  save();
+  refresh();
+  openCart();
+  if(CLAIMED_VOUCHER && typeof gtag === "function") gtag("event", "select_promotion", {promotion_id:code,promotion_name:voucher.label});
+}
+function refreshVoucherCards(subtotal){
+  document.querySelectorAll(".voucher-btn").forEach(btn => {
+    const code = btn.dataset.voucher;
+    const voucher = VOUCHERS[code];
+    const eligible = subtotal >= voucher.threshold;
+    const claimed = CLAIMED_VOUCHER === code;
+    const card = btn.closest(".v-card");
+    card.classList.toggle("eligible", eligible && !claimed);
+    card.classList.toggle("claimed", claimed);
+    btn.textContent = claimed ? "Batalkan Voucher" : eligible ? "Klaim Sekarang" : `Kurang ${rp(voucher.threshold - subtotal)}`;
+    btn.setAttribute("aria-pressed", String(claimed));
+  });
+}
 function refresh(){
-  const entries = Object.entries(cart);
+  const entries = getEntries();
   const n = entries.reduce((s, [, q]) => s + q, 0);
   document.getElementById("cnt-fab").textContent = n;
+  document.getElementById("cnt-head").textContent = n;
   document.querySelector(".fab").style.display = n ? "flex" : "none";
   const box = document.getElementById("items");
-  let total = 0;
+  let subtotal = 0;
   const parse = key => {
     const [slug, color] = key.split("|");
     return { p: PRODUCTS.find(x => x[0] === slug), color: color || "" };
@@ -783,7 +920,7 @@ function refresh(){
   } else {
     box.innerHTML = entries.map(([key, q]) => {
       const { p, color } = parse(key);
-      total += eff(p) * q;
+      subtotal += eff(p) * q;
       return `<div class="item">
         <h4>Auré ${p[1]}${color ? " — " + color : ""}</h4>
         <div class="row">
@@ -798,25 +935,80 @@ function refresh(){
       </div>`;
     }).join("");
   }
+  const selectedVoucher = VOUCHERS[CLAIMED_VOUCHER];
+  if(selectedVoucher && subtotal < selectedVoucher.threshold) CLAIMED_VOUCHER = "";
+  const voucher = VOUCHERS[CLAIMED_VOUCHER] || null;
+  const discount = voucher ? voucher.discount : 0;
+  const total = Math.max(0, subtotal - discount);
+  const hasGift = subtotal > 100000;
+  const hasFreeShipping = n >= 3 && JABODETABEK.test(CITY);
+  document.getElementById("subtotal").textContent = rp(subtotal);
   document.getElementById("total").textContent = rp(total);
+  document.getElementById("discount-row").hidden = !voucher;
+  document.getElementById("discount-label").textContent = voucher ? `Voucher ${voucher.label}` : "Voucher";
+  document.getElementById("discount").textContent = "−" + rp(discount);
+  const giftStatus = hasGift
+    ? `<div class="promo-item"><span class="promo-left">${TICK_ICON}<b>Free Gift:</b></span><span>Cermin Bulat</span></div>`
+    : `<div class="promo-progress">Tambah ${rp(Math.max(0, 100001 - subtotal))} untuk dapat hadiah gratis</div>`;
+  const shippingStatus = hasFreeShipping
+    ? `<div class="promo-item"><span class="promo-left">${TICK_ICON}<b>Gratis Ongkir</b></span><span>Rp10.000,-</span></div>`
+    : "";
+  document.getElementById("promo-status").innerHTML = giftStatus + shippingStatus;
+  refreshVoucherCards(subtotal);
   const lines = entries.map(([key, q], i) => {
     const { p, color } = parse(key);
     const sku = p[6] ? ` (SKU ${p[6]})` : "";
     return `${i + 1}. Auré ${p[1]}${color ? " - " + color : ""}${sku} x${q} — ${rp(eff(p) * q)}`;
   });
-  const msg = `Halo Auré! Saya mau order:%0A%0A${encodeURIComponent(lines.join("\n"))}%0A%0ATotal: ${encodeURIComponent(rp(total))}%0AKota: ${encodeURIComponent(CITY || "-")}%0AAlamat lengkap: (isi di sini)%0AUkuran/catatan: (isi di sini)`;
-  document.getElementById("wa-checkout").href = `https://wa.me/${WA_NUMBER}?text=${msg}`;
+  const promoLines = [];
+  if(voucher) promoLines.push(`- Voucher ${voucher.label}: -${rp(discount)}`);
+  if(hasGift) promoLines.push("- Free Gift (Cermin Bulat)");
+  if(hasFreeShipping) promoLines.push("- Gratis Ongkir hingga Rp10.000 (min. 3 item, JABODETABEK)");
+  const msg = [
+    "Halo Auré! Saya mau order:", "", ...lines, "",
+    `Nama: ${CUSTOMER_NAME || "-"}`,
+    `Subtotal produk: ${rp(subtotal)}`,
+    ...(promoLines.length ? ["Promo:", ...promoLines] : []),
+    `Total sementara: ${rp(total)}`,
+    `Kota: ${CITY || "-"}`,
+    "Alamat lengkap: (isi di sini)",
+    "Ukuran/catatan: (isi di sini)"
+  ].join("\n");
+  document.getElementById("wa-checkout").href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
   const inp = document.getElementById("city-in");
   if(document.activeElement !== inp){ inp.value = CITY; }
   inp.classList.toggle("ok", !!CITY);
+  const nameIn = document.getElementById("name-in");
+  if(document.activeElement !== nameIn){ nameIn.value = CUSTOMER_NAME; }
+  nameIn.classList.toggle("ok", !!CUSTOMER_NAME);
+  save();
 }
-function openCart(){ document.getElementById("drawer").classList.add("open"); refresh(); }
-function closeCart(){ document.getElementById("drawer").classList.remove("open"); }
-addEventListener("keydown", e => { if(e.key === "Escape"){ closeSize(); closeCart(); } });
+function openCart(){ document.getElementById("drawer").classList.add("open"); document.getElementById("drawer").setAttribute("aria-hidden","false"); refresh(); if(typeof gtag === "function") gtag("event", "view_cart"); }
+function closeCart(){ document.getElementById("drawer").classList.remove("open"); document.getElementById("drawer").setAttribute("aria-hidden","true"); }
+function openMarketplace(){
+  const modal = document.getElementById("market-modal");
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden","false");
+  modal.querySelector("button").focus();
+  if(typeof gtag === "function") gtag("event", "view_promotion", {promotion_name:"marketplace_modal"});
+}
+function closeMarketplace(){
+  const modal = document.getElementById("market-modal");
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden","true");
+}
+addEventListener("keydown", e => { if(e.key === "Escape"){ closeSize(); closeCart(); closeMarketplace(); } });
 
 /* ---------- ketik kotamu (search-bar: dropdown muncul saat fokus/ketik, hilang setelah pilih) ---------- */
 const cityIn = document.getElementById("city-in");
 const cityList = document.getElementById("city-list");
+const nameIn = document.getElementById("name-in");
+nameIn.addEventListener("input", e => {
+  CUSTOMER_NAME = e.target.value.trim();
+  e.target.classList.toggle("ok", !!CUSTOMER_NAME);
+  save();
+  refresh();
+});
 function listCities(q){
   const s = (q || "").trim().toLowerCase();
   const hits = s ? CITIES.filter(c => c.toLowerCase().includes(s)).slice(0, 8) : CITIES.slice(0, 8);
@@ -854,17 +1046,19 @@ cityIn.addEventListener("blur", () => {
 
 document.getElementById("wa-checkout").addEventListener("click", function(e){
   if(!Object.keys(cart).length){ e.preventDefault(); alert("Keranjang masih kosong."); return; }
-  if(!CITY && !cityIn.value.trim()){ e.preventDefault(); alert("Ketik kotamu dulu ya, biar admin bisa cek ongkir 🙂");
+  if(!CUSTOMER_NAME && !nameIn.value.trim()){
+    e.preventDefault(); alert("Isi nama pelanggan dulu ya."); nameIn.focus(); return;
+  }
+  if(!CUSTOMER_NAME) { CUSTOMER_NAME = nameIn.value.trim(); save(); }
+  if(!CITY && !cityIn.value.trim()){ e.preventDefault(); alert("Ketik kotamu dulu ya, biar admin bisa cek ongkir.");
     cityIn.focus(); return; }
   if(!CITY) { CITY = cityIn.value.trim(); save(); }
   if(typeof gtag === "function") gtag("event", "begin_checkout");
 });
 
-/* WA links (voucher & reseller) */
+/* WA link reseller */
 const waReseller = `https://wa.me/${WA_NUMBER}?text=` + encodeURIComponent("Halo Auré! Saya mau Daftar Reseller / minta pricelist grosir.");
-const waOngkir = `https://wa.me/${WA_NUMBER}?text=` + encodeURIComponent("Halo Auré! Saya mau klaim Gratis Ongkir Rp10.000 (JABODETABEK, min. 3 pcs).");
 document.getElementById("wa-reseller").href = waReseller;
-document.getElementById("wa-voucher").href = waOngkir;
 refresh();
 
 /* ---------- game: tag diskon yang nggak bisa ditangkap ---------- */
@@ -873,7 +1067,7 @@ const tag = document.getElementById("tag");
 const taunt = document.getElementById("taunt");
 const TAUNTS = [
   "Hampir! (nggak juga sih)",
-  "Kurang cepat 😏",
+  "Kurang cepat.",
   "Diskonnya gesit banget ya",
   "Serius deh, coba sekali lagi",
   "Kamu vs tag: 0 – 5",
