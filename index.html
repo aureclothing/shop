@@ -210,6 +210,17 @@ header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:3p
 .price{font-family:var(--display);font-size:19px}
 .card .price:only-of-type{margin-top:auto;padding-top:6px}
 .sel{margin-top:8px;border:2px solid var(--ink);background:var(--white);color:var(--ink);padding:8px;font-family:var(--body);font-weight:600;font-size:13px;width:100%}
+.size-link{margin-top:6px;background:none;border:none;padding:0;font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--magenta);text-decoration:underline;text-underline-offset:3px;justify-self:start;align-self:start}
+.size-link:hover{color:var(--ink)}
+.lb{position:fixed;inset:0;z-index:90;background:rgba(52,88,76,.9);display:none;place-items:center;padding:18px}
+.lb.open{display:grid}
+.lb-in{width:min(460px,92vw);background:var(--cream);border:3px solid var(--ink)}
+.lb-h{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;border-bottom:3px solid var(--ink)}
+.lb-h h3{font-size:18px}
+.lb-h button{background:none;border:none;font-size:26px;line-height:1;color:var(--ink)}
+.lb-box{position:relative;aspect-ratio:1;background:var(--blush);display:grid;place-items:center;overflow:hidden}
+.lb-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.lb-box .ph-txt{position:relative;text-align:center;font-size:13px;font-weight:700;color:var(--ink);opacity:.7;padding:20px}
 .add{margin-top:8px;border:2px solid var(--ink);background:var(--ink);color:var(--cream);padding:9px 10px;font-weight:800;font-size:12.5px;text-transform:uppercase;letter-spacing:.05em}
 .add:hover{background:var(--magenta);border-color:var(--magenta)}
 .add.done{background:var(--pink);border-color:var(--pink);color:var(--ink)}
@@ -502,6 +513,17 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
   </div>
 </footer>
 
+<!-- ============ SIZE LIGHTBOX ============ -->
+<div class="lb" id="lb" onclick="if(event.target===this)closeSize()">
+  <div class="lb-in" role="dialog" aria-label="Panduan ukuran">
+    <div class="lb-h">
+      <h3 id="lb-title">Size</h3>
+      <button onclick="closeSize()" aria-label="Tutup">×</button>
+    </div>
+    <div class="lb-box" id="lb-box"></div>
+  </div>
+</div>
+
 <!-- ============ CART ============ -->
 <button class="fab" onclick="openCart()" aria-label="Buka keranjang belanja">Keranjang <b id="cnt-fab">0</b></button>
 <div class="drawer" id="drawer" aria-hidden="true">
@@ -638,6 +660,41 @@ const wasOf = p => (p[8] && Number(p[8]) > Number(p[3])) ? Number(p[8]) : Math.m
 /* harga efektif: produk promo = harga diskon; di luar promo = harga asli (coret) */
 const eff = p => PROMO.has(p[0]) ? Number(p[3]) : wasOf(p);
 
+/* ---------- foto produk ----------
+   Nama file baru : products/{slug}{warna}.jpg   (mis. adelinemaroon.jpg)
+   Nama file lama : products/{slug}-1.jpg        (tetap dipakai jika yg baru belum ada)
+   Size chart     : products/{slug}size.jpg
+   Kalau dua-duanya tidak ada -> tampil kotak placeholder berhuruf besar.
+------------------------------------ */
+const cslug = c => (c || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+const imgFor = (slug, color) => `products/${slug}${cslug(color)}.jpg`;
+function imgErr(el){
+  if(el.dataset.stage === "0"){          // foto warna belum ada -> coba foto lama
+    el.dataset.stage = "1";
+    el.src = "products/" + el.dataset.slug + "-1.jpg";
+  } else {                               // dua-duanya tidak ada -> placeholder
+    el.style.display = "none";
+  }
+}
+function swapImg(slug){
+  const sel = document.getElementById("sel-" + slug);
+  const img = document.getElementById("img-" + slug);
+  if(!sel || !img) return;
+  img.dataset.stage = "0";
+  img.style.display = "";
+  img.src = imgFor(slug, sel.value);
+}
+/* ---------- size chart ---------- */
+function openSize(slug, name){
+  document.getElementById("lb-title").textContent = "Size — Auré " + name;
+  const box = document.getElementById("lb-box");
+  box.innerHTML = `<span class="ph-txt">Panduan ukuran segera hadir.<br>Untuk sementara, tanya admin via WhatsApp ya ✦</span>
+    <img src="products/${slug}size.jpg" alt="Panduan ukuran Auré ${name}" onerror="this.remove()">`;
+  document.getElementById("lb").classList.add("open");
+  if(typeof gtag === "function") gtag("event", "view_size_chart", {item_id: slug});
+}
+function closeSize(){ document.getElementById("lb").classList.remove("open"); }
+
 /* ---------- katalog ---------- */
 const grid = document.getElementById("grid");
 let curF = "all", curQ = "";
@@ -665,13 +722,16 @@ function renderGrid(){
         ${p[5] === "best" ? '<span class="badge">Best Seller</span>' : ""}
         ${p[5] === "new" ? '<span class="badge new">Baru</span>' : ""}
         <span class="init">${p[1][0]}</span>
-        <img src="products/${p[0]}-1.jpg" alt="Auré ${p[1]} — ${p[2]}" loading="lazy" onerror="this.remove()">
+        <img id="img-${p[0]}" data-slug="${p[0]}" data-stage="${p[7] ? "0" : "1"}"
+             src="${p[7] ? imgFor(p[0], p[7][0]) : "products/" + p[0] + "-1.jpg"}"
+             alt="Auré ${p[1]} — ${p[2]}" loading="lazy" onerror="imgErr(this)">
       </div>
       <div class="card-b">
         <small>${p[2]}</small>
         <h3>Auré ${p[1]}</h3>
         ${priceHTML}
-        ${p[7] ? `<select class="sel" id="sel-${p[0]}" aria-label="Pilih warna">${p[7].map(c => `<option>${c}</option>`).join("")}</select>` : ""}
+        ${p[7] ? `<select class="sel" id="sel-${p[0]}" aria-label="Pilih warna" onchange="swapImg('${p[0]}')">${p[7].map(c => `<option>${c}</option>`).join("")}</select>` : ""}
+        <button class="size-link" onclick="openSize('${p[0]}','${p[1].replace(/'/g,"")}')">Size</button>
         <button class="add" onclick="add('${p[0]}', this)">+ Keranjang</button>
       </div>
     </article>`;
@@ -752,6 +812,7 @@ function refresh(){
 }
 function openCart(){ document.getElementById("drawer").classList.add("open"); refresh(); }
 function closeCart(){ document.getElementById("drawer").classList.remove("open"); }
+addEventListener("keydown", e => { if(e.key === "Escape"){ closeSize(); closeCart(); } });
 
 /* ---------- ketik kotamu (search-bar: dropdown muncul saat fokus/ketik, hilang setelah pilih) ---------- */
 const cityIn = document.getElementById("city-in");

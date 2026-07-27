@@ -1,0 +1,483 @@
+================================================================
+TUTORIAL ADMIN AURE — UPLOAD FOTO WARNA & UKURAN
+Versi 3 — 14 Juli 2026
+================================================================
+
+KABAR BAIK:
+Foto yang sudah kamu upload kemarin AMAN. Tidak perlu diganti
+nama, tidak perlu upload ulang. Semuanya tetap dipakai.
+
+Yang kita tambah sekarang cuma DUA hal:
+  1) Foto per WARNA  -> biar saat pembeli ganti warna di website,
+                        fotonya ikut ganti
+  2) Foto UKURAN     -> muncul saat pembeli tap tulisan "SIZE"
+
+----------------------------------------------------------------
+ATURAN NAMA FILE (gampang, tanpa angka, tanpa strip)
+----------------------------------------------------------------
+  FOTO WARNA  ->  namaprodukwarna.jpg
+  FOTO UKURAN ->  namaproduksize.jpg
+
+  Contoh:
+     adelinemaroon.jpg     (Adeline Cardigan warna Maroon)
+     adelinehitam.jpg      (Adeline Cardigan warna Hitam)
+     adelinesize.jpg       (panduan ukuran Adeline Cardigan)
+
+  Aturannya:
+  - huruf KECIL semua
+  - TIDAK ada spasi, TIDAK ada strip (-), TIDAK ada angka
+  - warna dua kata digabung: "Dark Choco" jadi darkchoco
+  - akhiran selalu .jpg
+
+  SALAH: Adeline-Maroon.jpg / adeline maroon.jpg / adelineMaroon.JPG
+  BENAR: adelinemaroon.jpg
+
+----------------------------------------------------------------
+UKURAN & BENTUK FOTO
+----------------------------------------------------------------
+  FOTO WARNA  : bentuk portrait (memanjang ke bawah),
+                contoh 900 x 1200 piksel
+  FOTO UKURAN : bentuk KOTAK / persegi (1:1),
+                contoh 1000 x 1000 piksel
+                (isinya tabel ukuran: lingkar dada, panjang baju, dll)
+
+  Besar file  : usahakan di bawah 300 KB, maksimal 500 KB.
+                Foto dari HP biasanya 2-5 MB = kebesaran.
+                Kecilkan dulu gratis di tinypng.com
+                (tarik semua foto ke sana, lalu download hasilnya)
+
+  Catatan: foto otomatis dipaskan penuh ke kotaknya, jadi tidak
+  akan ada garis putih. Tapi kalau bentuknya jauh dari yang
+  disarankan, pinggir foto bisa kepotong sedikit. Untuk foto
+  UKURAN, tolong benar-benar dibuat kotak biar tabelnya tidak
+  terpotong.
+
+----------------------------------------------------------------
+CARA UPLOAD (sama seperti kemarin)
+----------------------------------------------------------------
+  1. Buka bookmark GitHub, klik repo "shop"
+  2. Klik folder "products"
+  3. Klik "Add file" > "Upload files"
+  4. Tarik foto-fotonya ke kotak (boleh banyak sekaligus)
+  5. Scroll bawah, klik tombol HIJAU "Commit changes"
+  6. Tunggu 1-2 menit, buka aureclothing.id, refresh
+
+----------------------------------------------------------------
+TIDAK HARUS SEKALIGUS SEMUA
+----------------------------------------------------------------
+Kerjakan pelan-pelan per produk juga tidak apa-apa.
+Kalau foto warna belum diupload, website otomatis menampilkan
+foto lama yang sudah ada. Jadi website tidak akan rusak
+atau kosong.
+
+Urutan yang paling berguna dikerjakan duluan:
+  1. Foto size (39 file) - paling sering ditanya pembeli
+  2. Foto warna produk BEST SELLER: adeline, sienna, daily, solene
+  3. Sisanya menyusul
+
+----------------------------------------------------------------
+KALAU SALAH NAMA / SALAH FOTO
+----------------------------------------------------------------
+  1. Klik file yang salah di GitHub
+  2. Klik ikon tempat sampah (kanan atas)
+  3. Klik tombol hijau "Commit changes"
+  4. Upload ulang dengan nama yang benar
+
+----------------------------------------------------------------
+JANGAN DISENTUH
+----------------------------------------------------------------
+  index.html, CNAME, robots.txt, sitemap.xml,
+  logo.png, icon.png, tiktok.png, banner-og.jpg
+  dan semua foto lama yang berakhiran -1.jpg
+  Kalau ragu, tanya Kak Rick dulu.
+
+================================================================
+DAFTAR LENGKAP NAMA FILE (copy dari sini biar tidak salah ketik)
+================================================================
+ADELINE CARDIGAN  (4 foto warna + 1 size)
+   adelinemaroon.jpg              = warna Maroon
+   adelinedarkchoco.jpg           = warna Dark Choco
+   adelineputih.jpg               = warna Putih
+   adelinehitam.jpg               = warna Hitam
+   adelinesize.jpg                = panduan ukuran
+
+SIENNA WIDE PANTS  (6 foto warna + 1 size)
+   siennacoffebrown.jpg           = warna Coffe Brown
+   siennamisty.jpg                = warna Misty
+   siennaterracotta.jpg           = warna Terracotta
+   siennahitam.jpg                = warna Hitam
+   siennakhaki.jpg                = warna Khaki
+   siennadarkchoco.jpg            = warna Dark Choco
+   siennasize.jpg                 = panduan ukuran
+
+DAILY POCKET PANTS  (6 foto warna + 1 size)
+   dailyolive.jpg                 = warna Olive
+   dailydarkbrown.jpg             = warna Dark Brown
+   dailyoat.jpg                   = warna Oat
+   dailycharcoal.jpg              = warna Charcoal
+   dailykhaki.jpg                 = warna Khaki
+   dailyhitam.jpg                 = warna Hitam
+   dailysize.jpg                  = panduan ukuran
+
+SOLÈNE TOP  (9 foto warna + 1 size)
+   solenehitam.jpg                = warna Hitam
+   solenedustypink.jpg            = warna Dusty Pink
+   solenemisty.jpg                = warna Misty
+   soleneputih.jpg                = warna Putih
+   solenebabyblue.jpg             = warna Baby Blue
+   solenemaroon.jpg               = warna Maroon
+   solenesoftbrown.jpg            = warna Soft Brown
+   solenenavy.jpg                 = warna Navy
+   solenedarkchoco.jpg            = warna Dark Choco
+   solenesize.jpg                 = panduan ukuran
+
+VIVIANA CARDIGAN  (6 foto warna + 1 size)
+   vivianablack.jpg               = warna Black
+   viviananavy.jpg                = warna Navy
+   vivianadustypink.jpg           = warna Dusty Pink
+   vivianamaroon.jpg              = warna Maroon
+   vivianawhite.jpg               = warna White
+   vivianacoca.jpg                = warna Coca
+   vivianasize.jpg                = panduan ukuran
+
+ROSALIE TOP  (10 foto warna + 1 size)
+   rosaliehitam.jpg               = warna Hitam
+   rosalieputih.jpg               = warna Putih
+   rosaliedustypink.jpg           = warna Dusty Pink
+   rosaliemaroon.jpg              = warna Maroon
+   rosaliemossgreen.jpg           = warna Moss Green
+   rosaliemistyblue.jpg           = warna Misty Blue
+   rosalietaro.jpg                = warna Taro
+   rosaliemisty.jpg               = warna Misty
+   rosaliedarkchoco.jpg           = warna Dark Choco
+   rosaliesoftbrown.jpg           = warna Soft Brown
+   rosaliesize.jpg                = panduan ukuran
+
+ODETTE TOP  (16 foto warna + 1 size)
+   odettemisty.jpg                = warna Misty
+   odettehitam.jpg                = warna Hitam
+   odettemaroon.jpg               = warna Maroon
+   odettedustypink.jpg            = warna Dusty Pink
+   odettemossgreen.jpg            = warna Moss Green
+   odetteputih.jpg                = warna Putih
+   odettewhitepolka.jpg           = warna White Polka
+   odettesoftbluepolka.jpg        = warna Soft Blue Polka
+   odettedarkchoco.jpg            = warna Dark Choco
+   odettebabyblue.jpg             = warna Baby Blue
+   odettenavy.jpg                 = warna Navy
+   odettepinksoftpolka.jpg        = warna Pink Soft Polka
+   odettetaro.jpg                 = warna Taro
+   odetteashgrey.jpg              = warna Ash Grey
+   odetteblackpolka.jpg           = warna Black Polka
+   odettesoftbrown.jpg            = warna Soft Brown
+   odettesize.jpg                 = panduan ukuran
+
+ESTELLE CARDIGAN  (4 foto warna + 1 size)
+   estellemaroon.jpg              = warna Maroon
+   estellecocoa.jpg               = warna Cocoa
+   estellewhite.jpg               = warna White
+   estelleblack.jpg               = warna Black
+   estellesize.jpg                = panduan ukuran
+
+VIVIENNE CARDIGAN  (4 foto warna + 1 size)
+   vivienneputih.jpg              = warna Putih
+   viviennemaroon.jpg             = warna Maroon
+   viviennehitam.jpg              = warna Hitam
+   viviennedarkchoco.jpg          = warna Dark Choco
+   viviennesize.jpg               = panduan ukuran
+
+SABRINA CARDIGAN  (4 foto warna + 1 size)
+   sabrinaputih.jpg               = warna Putih
+   sabrinahitam.jpg               = warna Hitam
+   sabrinadarkchoco.jpg           = warna Dark Choco
+   sabrinamaroon.jpg              = warna Maroon
+   sabrinasize.jpg                = panduan ukuran
+
+NOELLE TOP  (10 foto warna + 1 size)
+   noelledarkchoco.jpg            = warna Dark Choco
+   noelledustypink.jpg            = warna Dusty Pink
+   noellemisty.jpg                = warna Misty
+   noellesoftbrown.jpg            = warna Soft Brown
+   noelleputih.jpg                = warna Putih
+   noellegrey.jpg                 = warna Grey
+   noellemossgreen.jpg            = warna Moss Green
+   noellemistyblue.jpg            = warna Misty Blue
+   noelleblack.jpg                = warna Black
+   noellemaroon.jpg               = warna Maroon
+   noellesize.jpg                 = panduan ukuran
+
+EVELINE TOP  (6 foto warna + 1 size)
+   evelinemistyblue.jpg           = warna Misty Blue
+   evelinedustypink.jpg           = warna Dusty Pink
+   evelinemossgreen.jpg           = warna Moss Green
+   evelinemisty.jpg               = warna Misty
+   evelinetaro.jpg                = warna Taro
+   evelinesoftbrown.jpg           = warna Soft Brown
+   evelinesize.jpg                = panduan ukuran
+
+CELESTE TOP  (9 foto warna + 1 size)
+   celestedustypink.jpg           = warna Dusty Pink
+   celestesoftbrown.jpg           = warna Soft Brown
+   celesteskyblue.jpg             = warna Sky Blue
+   celestehitam.jpg               = warna Hitam
+   celestemaroon.jpg              = warna Maroon
+   celestesagegreen.jpg           = warna Sage Green
+   celestemisty.jpg               = warna Misty
+   celestedarkchoco.jpg           = warna Dark Choco
+   celesteashgrey.jpg             = warna Ash Grey
+   celestesize.jpg                = panduan ukuran
+
+CLAIRE TOP  (12 foto warna + 1 size)
+   clairebabybluepolka.jpg        = warna Baby Blue Polka
+   clairemaroon.jpg               = warna Maroon
+   clairewhitepolka.jpg           = warna White Polka
+   clairebabypinkpolka.jpg        = warna Baby Pink Polka
+   claireespresso.jpg             = warna Espresso
+   clairecharcoalgrey.jpg         = warna Charcoal Grey
+   clairebabyblue.jpg             = warna Baby Blue
+   claireblackpolka.jpg           = warna Black Polka
+   clairedustypink.jpg            = warna Dusty Pink
+   claireblack.jpg                = warna Black
+   claireashgrey.jpg              = warna Ash Grey
+   claireallmond.jpg              = warna Allmond
+   clairesize.jpg                 = panduan ukuran
+
+ELOISE TOP  (6 foto warna + 1 size)
+   eloiseblack.jpg                = warna Black
+   eloisecocoa.jpg                = warna Cocoa
+   eloisenavy.jpg                 = warna Navy
+   eloisedustypink.jpg            = warna Dusty Pink
+   eloisemaroon.jpg               = warna Maroon
+   eloisewhite.jpg                = warna White
+   eloisesize.jpg                 = panduan ukuran
+
+SELENE TOP  (11 foto warna + 1 size)
+   selenesoftbrown.jpg            = warna Soft Brown
+   selenebabyblue.jpg             = warna Baby Blue
+   selenemaroon.jpg               = warna Maroon
+   selenemistyblue.jpg            = warna Misty Blue
+   selenehitam.jpg                = warna Hitam
+   seleneputih.jpg                = warna Putih
+   selenemauve.jpg                = warna Mauve
+   selenemisty.jpg                = warna Misty
+   selenedarkchoco.jpg            = warna Dark Choco
+   selenemossgreen.jpg            = warna Moss Green
+   selenedustypink.jpg            = warna Dusty Pink
+   selenesize.jpg                 = panduan ukuran
+
+SOPHIE CARDIGAN  (4 foto warna + 1 size)
+   sophieblack.jpg                = warna Black
+   sophiemaroon.jpg               = warna Maroon
+   sophiecocoa.jpg                = warna Cocoa
+   sophiewhite.jpg                = warna White
+   sophiesize.jpg                 = panduan ukuran
+
+VALERIE BLOUSE  (4 foto warna + 1 size)
+   valeriemaroon.jpg              = warna Maroon
+   valeriecocoa.jpg               = warna Cocoa
+   valeriewhite.jpg               = warna White
+   valerieblack.jpg               = warna Black
+   valeriesize.jpg                = panduan ukuran
+
+CAMILLE TOP  (6 foto warna + 1 size)
+   camillemistyblue.jpg           = warna Misty Blue
+   camillemossgreen.jpg           = warna Moss Green
+   camilledustypink.jpg           = warna Dusty Pink
+   camillemisty.jpg               = warna Misty
+   camillesoftbrown.jpg           = warna Soft Brown
+   camilletaro.jpg                = warna Taro
+   camillesize.jpg                = panduan ukuran
+
+MAELLE TOP  (6 foto warna + 1 size)
+   maelledustypink.jpg            = warna Dusty Pink
+   maelletaro.jpg                 = warna Taro
+   maellemossgreen.jpg            = warna Moss Green
+   maellebabyblue.jpg             = warna Baby Blue
+   maellesoftbrown.jpg            = warna Soft Brown
+   maellemisty.jpg                = warna Misty
+   maellesize.jpg                 = panduan ukuran
+
+LUCIENNE TOP  (10 foto warna + 1 size)
+   luciennenavy.jpg               = warna Navy
+   luciennedustypink.jpg          = warna Dusty Pink
+   lucienneashgrey.jpg            = warna Ash Grey
+   luciennewhitepolka.jpg         = warna White Polka
+   luciennebabypinkpolka.jpg      = warna Baby Pink Polka
+   lucienneblackpolka.jpg         = warna Black Polka
+   luciennemaroon.jpg             = warna Maroon
+   luciennebabyblue.jpg           = warna Baby Blue
+   luciennehitam.jpg              = warna Hitam
+   luciennebabybluepolka.jpg      = warna Baby Blue Polka
+   luciennesize.jpg               = panduan ukuran
+
+AMÉLIE TOP  (7 foto warna + 1 size)
+   ameliemauve.jpg                = warna Mauve
+   amelietaro.jpg                 = warna Taro
+   ameliedustypink.jpg            = warna Dusty Pink
+   ameliemisty.jpg                = warna Misty
+   ameliesoftbrown.jpg            = warna Soft Brown
+   ameliemistyblue.jpg            = warna Misty Blue
+   ameliedarkchoco.jpg            = warna Dark Choco
+   ameliesize.jpg                 = panduan ukuran
+
+VANIA PLEATED PANTS  (6 foto warna + 1 size)
+   vaniamisty.jpg                 = warna Misty
+   vaniahitam.jpg                 = warna Hitam
+   vaniaputih.jpg                 = warna Putih
+   vaniamocca.jpg                 = warna Mocca
+   vaniacoksu.jpg                 = warna Coksu
+   vanianavy.jpg                  = warna Navy
+   vaniasize.jpg                  = panduan ukuran
+
+GISELLE TWINSET  (4 foto warna + 1 size)
+   giselleputih.jpg               = warna Putih
+   giselledarkchoco.jpg           = warna Dark Choco
+   gisellemaroon.jpg              = warna Maroon
+   gisellehitam.jpg               = warna Hitam
+   gisellesize.jpg                = panduan ukuran
+
+JULIETTE TOP  (10 foto warna + 1 size)
+   juliettetaro.jpg               = warna Taro
+   juliettehitam.jpg              = warna Hitam
+   juliettemistyblue.jpg          = warna Misty Blue
+   juliettesoftbrown.jpg          = warna Soft Brown
+   juliettemaroon.jpg             = warna Maroon
+   juliettemisty.jpg              = warna Misty
+   juliettedarkchoco.jpg          = warna Dark Choco
+   juliettemossgreen.jpg          = warna Moss Green
+   julietteputih.jpg              = warna Putih
+   juliettedustypink.jpg          = warna Dusty Pink
+   juliettesize.jpg               = panduan ukuran
+
+ELODIE TOP  (4 foto warna + 1 size)
+   elodiebabyblue.jpg             = warna Baby Blue
+   elodiemisty.jpg                = warna Misty
+   elodiedustypink.jpg            = warna Dusty Pink
+   elodiesoftbrown.jpg            = warna Soft Brown
+   elodiesize.jpg                 = panduan ukuran
+
+SERENA TOP  (4 foto warna + 1 size)
+   serenamisty.jpg                = warna Misty
+   serenasoftbrown.jpg            = warna Soft Brown
+   serenadustypink.jpg            = warna Dusty Pink
+   serenaskyblue.jpg              = warna Sky Blue
+   serenasize.jpg                 = panduan ukuran
+
+ELARA TOP  (13 foto warna + 1 size)
+   elaralightgrey.jpg             = warna Light Grey
+   elarablack.jpg                 = warna Black
+   elaramistygrey.jpg             = warna misty grey
+   elarababyblue.jpg              = warna Baby Blue
+   elaracocoa.jpg                 = warna Cocoa
+   elaramauve.jpg                 = warna Mauve
+   elarawhite.jpg                 = warna White
+   elaraolive.jpg                 = warna Olive
+   elarasagegreen.jpg             = warna Sage Green
+   elaragreen.jpg                 = warna Green
+   elaradustyblue.jpg             = warna Dusty Blue
+   elaradustypink.jpg             = warna Dusty Pink
+   elaraalmond.jpg                = warna Almond
+   elarasize.jpg                  = panduan ukuran
+
+COLETTE TOP  (4 foto warna + 1 size)
+   colettesoftbrown.jpg           = warna Soft Brown
+   colettebabyblue.jpg            = warna Baby Blue
+   colettedustypink.jpg           = warna Dusty Pink
+   colettemisty.jpg               = warna Misty
+   colettesize.jpg                = panduan ukuran
+
+MADELEINE TOP  (10 foto warna + 1 size)
+   madeleinewhite.jpg             = warna White
+   madeleineblack.jpg             = warna Black
+   madeleinecocoa.jpg             = warna Cocoa
+   madeleinepink.jpg              = warna Pink
+   madeleinedustyblue.jpg         = warna Dusty Blue
+   madeleineolive.jpg             = warna Olive
+   madeleinecharcoalgrey.jpg      = warna Charcoal Grey
+   madeleinealmond.jpg            = warna Almond
+   madeleinemaroon.jpg            = warna Maroon
+   madeleinemauve.jpg             = warna Mauve
+   madeleinesize.jpg              = panduan ukuran
+
+ZIVA JOGGER PANTS  (2 foto warna + 1 size)
+   zivawhitepolkadot.jpg          = warna White Polkadot
+   zivaredpolkadot.jpg            = warna Red polkadot
+   zivasize.jpg                   = panduan ukuran
+
+CHRISTA TOP  (6 foto warna + 1 size)
+   christadustypink.jpg           = warna Dusty Pink
+   christataro.jpg                = warna Taro
+   christamisty.jpg               = warna Misty
+   christamistyblue.jpg           = warna Misty Blue
+   christamossgreen.jpg           = warna Moss Green
+   christasoftbrown.jpg           = warna Soft Brown
+   christasize.jpg                = panduan ukuran
+
+AURORA PANTS  (2 foto warna + 1 size)
+   auroraredpolkadot.jpg          = warna Red Polkadot
+   aurorawhitepolkadot.jpg        = warna White Polkadot
+   aurorasize.jpg                 = panduan ukuran
+
+MELISSA TOP  (10 foto warna + 1 size)
+   melissamisty.jpg               = warna Misty
+   melissataro.jpg                = warna Taro
+   melissasoftbrown.jpg           = warna Soft Brown
+   melissamaroon.jpg              = warna Maroon
+   melissaputih.jpg               = warna Putih
+   melissadarkchoco.jpg           = warna Dark Choco
+   melissahitam.jpg               = warna Hitam
+   melissamossgreen.jpg           = warna Moss Green
+   melissamistyblue.jpg           = warna Misty Blue
+   melissadustypink.jpg           = warna Dusty Pink
+   melissasize.jpg                = panduan ukuran
+
+LULA CROP TOP  (4 foto warna + 1 size)
+   lulaskyblue.jpg                = warna Sky Blue
+   luladustypink.jpg              = warna Dusty Pink
+   lulamisty.jpg                  = warna Misty
+   lulasoftbrown.jpg              = warna Soft Brown
+   lulasize.jpg                   = panduan ukuran
+
+ARUMI TOP  (10 foto warna + 1 size)
+   arumihitam.jpg                 = warna Hitam
+   arumimisty.jpg                 = warna Misty
+   arumitaro.jpg                  = warna Taro
+   arumimossgreen.jpg             = warna Moss Green
+   arumimistyblue.jpg             = warna Misty Blue
+   arumidustypink.jpg             = warna Dusty Pink
+   arumisoftbrown.jpg             = warna Soft Brown
+   arumimaroon.jpg                = warna Maroon
+   arumidarkchoco.jpg             = warna Dark Choco
+   arumiputih.jpg                 = warna Putih
+   arumisize.jpg                  = panduan ukuran
+
+SEARA TOP  (6 foto warna + 1 size)
+   searamistyblue.jpg             = warna Misty Blue
+   searamossgreen.jpg             = warna Moss Green
+   searasoftbrown.jpg             = warna Soft Brown
+   searataro.jpg                  = warna Taro
+   searadustypink.jpg             = warna Dusty Pink
+   searamisty.jpg                 = warna Misty
+   searasize.jpg                  = panduan ukuran
+
+ROSE KNIT TOP  (7 foto warna + 1 size)
+   rosebabyblue.jpg               = warna Baby Blue
+   rosetaro.jpg                   = warna Taro
+   rosedustypink.jpg              = warna Dusty Pink
+   rosemisty.jpg                  = warna Misty
+   rosemistyblue.jpg              = warna Misty Blue
+   rosemossgreen.jpg              = warna Moss Green
+   rosesoftbrown.jpg              = warna Soft Brown
+   rosesize.jpg                   = panduan ukuran
+
+CERMIN KACA BULAT  (foto lama sudah ada)
+   cermin-1.jpg                     = foto produk (nama lama, TIDAK usah diubah)
+   cerminsize.jpg                 = panduan ukuran
+
+================================================================
+TAMBAHAN (upload di halaman utama repo, BUKAN folder products)
+================================================================
+  qris.png   = gambar kode QRIS pembayaran (bentuk kotak)
+  hero.jpg   = foto model besar untuk bagian atas website
+               (opsional, bentuk lebar/landscape)
+================================================================
