@@ -72,6 +72,24 @@
   gtag('config', 'G-WVS2XY9SPY');
 </script>
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2145513279700564');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2145513279700564&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,800;1,400&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
@@ -746,6 +764,27 @@ const wasOf = p => Math.ceil((Number(p[3]) / 0.65) / 5000) * 5000;
 /* harga efektif: produk promo = harga diskon; di luar promo = harga asli (coret) */
 const eff = p => PROMO.has(p[0]) ? Number(p[3]) : wasOf(p);
 
+/* ---------- Meta Pixel helper ----------
+   fbt(event, params) — aman dipanggil walau pixel diblokir adblocker.
+   Advanced matching (kota/nama) dikirim lewat fbq('init') — Meta yang
+   meng-hash di browser; kita tidak pernah menyimpan data itu.
+---------------------------------------- */
+const PIXEL_ID = "2145513279700564";
+function fbt(ev, params){
+  if(typeof fbq !== "function") return;
+  try { params ? fbq("track", ev, params) : fbq("track", ev); } catch(e){}
+}
+function fbMatch(){
+  if(typeof fbq !== "function") return;
+  const am = {};
+  if(CITY) am.ct = CITY.split(",")[0].trim().toLowerCase().replace(/[^a-z]/g, "");
+  if(typeof CUSTOMER_NAME !== "undefined" && CUSTOMER_NAME){
+    am.fn = CUSTOMER_NAME.trim().split(/\s+/)[0].toLowerCase();
+  }
+  if(CITY) am.country = "id";
+  if(Object.keys(am).length){ try { fbq("init", PIXEL_ID, am); } catch(e){} }
+}
+
 /* ---------- foto produk ----------
    Nama file baru : products/{slug}{warna}.jpg   (mis. adelinemaroon.jpg)
    Nama file lama : products/{slug}-1.jpg        (tetap dipakai jika yg baru belum ada)
@@ -769,7 +808,16 @@ function swapImg(slug){
   img.dataset.stage = "0";
   img.style.display = "";
   img.src = imgFor(slug, sel.value);
+  const p = PRODUCTS.find(x => x[0] === slug);
+  if(p && !VIEWED.has(slug)){
+    VIEWED.add(slug);
+    fbt("ViewContent", {
+      content_ids:[p[6] || slug], content_name:"Auré " + p[1], content_type:"product",
+      currency:"IDR", value:eff(p)
+    });
+  }
 }
+const VIEWED = new Set();
 /* ---------- size chart ---------- */
 function openSize(slug, name){
   document.getElementById("lb-title").textContent = "Size — Auré " + name;
@@ -778,6 +826,11 @@ function openSize(slug, name){
     <img src="products/${slug}size.jpg" alt="Panduan ukuran Auré ${name}" onerror="this.remove()">`;
   document.getElementById("lb").classList.add("open");
   if(typeof gtag === "function") gtag("event", "view_size_chart", {item_id: slug});
+  const vp = PRODUCTS.find(p => p[0] === slug);
+  if(vp) fbt("ViewContent", {
+    content_ids:[vp[6] || slug], content_name:"Auré " + vp[1], content_type:"product",
+    currency:"IDR", value:eff(vp)
+  });
 }
 function closeSize(){ document.getElementById("lb").classList.remove("open"); }
 
@@ -830,7 +883,14 @@ document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () =
   curF = c.dataset.f;
   renderGrid();
 }));
-document.getElementById("q").addEventListener("input", e => { curQ = e.target.value; renderGrid(); });
+let searchT = 0;
+document.getElementById("q").addEventListener("input", e => {
+  curQ = e.target.value;
+  renderGrid();
+  clearTimeout(searchT);
+  const term = curQ.trim();
+  if(term.length >= 3) searchT = setTimeout(() => fbt("Search", {search_string: term}), 900);
+});
 const filt = document.getElementById("filters");
 document.getElementById("fL").addEventListener("click", () => filt.scrollBy({left:-150, behavior:"smooth"}));
 document.getElementById("fR").addEventListener("click", () => filt.scrollBy({left:150, behavior:"smooth"}));
@@ -848,6 +908,10 @@ function add(slug, btn){
   const product = PRODUCTS.find(p => p[0] === slug);
   if(typeof gtag === "function" && product) gtag("event", "add_to_cart", {
     currency:"IDR", value:eff(product), items:[{item_id:slug,item_name:product[1],item_variant:sel ? sel.value : "",price:eff(product),quantity:1}]
+  });
+  if(product) fbt("AddToCart", {
+    content_ids:[product[6] || slug], content_name:"Auré " + product[1], content_type:"product",
+    contents:[{id:product[6] || slug, quantity:1}], currency:"IDR", value:eff(product)
   });
   if(btn){ btn.textContent = "Sudah Ditambahkan"; btn.classList.add("done");
     setTimeout(() => { btn.textContent = "Keranjang"; btn.classList.remove("done"); }, 900); }
@@ -1019,6 +1083,7 @@ function setCity(c){
   cityList.hidden = true;
   cityIn.blur();
   refresh();
+  if(CITY){ fbMatch(); fbt("FindLocation", {city: CITY}); }
 }
 cityIn.addEventListener("focus", () => listCities(cityIn.value));
 cityIn.addEventListener("input", e => listCities(e.target.value));
@@ -1048,6 +1113,18 @@ document.getElementById("wa-checkout").addEventListener("click", function(e){
     cityIn.focus(); return; }
   if(!CITY) { CITY = cityIn.value.trim(); save(); }
   if(typeof gtag === "function") gtag("event", "begin_checkout");
+  const ent = getEntries();
+  let val = 0, num = 0;
+  const contents = ent.map(([key, q]) => {
+    const p = PRODUCTS.find(x => x[0] === key.split("|")[0]);
+    val += eff(p) * q; num += q;
+    return {id: p[6] || p[0], quantity: q, item_price: eff(p)};
+  });
+  fbMatch();
+  fbt("InitiateCheckout", {
+    contents, content_ids: contents.map(c => c.id), content_type:"product",
+    num_items: num, currency:"IDR", value: val
+  });
 });
 
 /* WA link reseller */
