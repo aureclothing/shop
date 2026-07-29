@@ -293,6 +293,11 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
 .foot small{opacity:.6;font-size:12px}
 
 /* ---------- cart drawer ---------- */
+.totop{position:fixed;right:14px;bottom:14px;z-index:59;width:44px;height:44px;background:var(--cream);color:var(--ink);border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);display:none;place-items:center;font-size:19px;line-height:1;padding:0;transition:bottom .18s ease}
+.totop.show{display:grid}
+.totop.lifted{bottom:76px}
+.totop:hover{background:var(--pink)}
+.totop:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
 .fab{position:fixed;right:14px;bottom:14px;z-index:60;background:var(--pink);color:var(--ink);border:3px solid var(--ink);padding:14px 18px;font-weight:800;font-size:14px;letter-spacing:.04em;display:none;gap:8px;align-items:center;box-shadow:4px 4px 0 var(--ink)}
 .fab b{background:var(--ink);color:var(--cream);border-radius:99px;min-width:22px;height:22px;display:grid;place-items:center;font-size:12px;padding:0 6px}
 .drawer{position:fixed;inset:0;z-index:70;display:none}
@@ -607,6 +612,7 @@ footer{background:var(--ink);color:var(--cream);padding:36px 0 90px}
 </div>
 
 <!-- ============ CART ============ -->
+<button class="totop" id="totop" onclick="toTop()" aria-label="Kembali ke atas" title="Kembali ke atas">&#8593;</button>
 <button class="fab" onclick="openCart()" aria-label="Buka keranjang belanja">Keranjang <b id="cnt-fab">0</b></button>
 <div class="drawer" id="drawer" aria-hidden="true">
   <div class="bg" onclick="closeCart()"></div>
@@ -967,6 +973,7 @@ function refresh(){
   const n = entries.reduce((s, [, q]) => s + q, 0);
   document.getElementById("cnt-fab").textContent = n;
   document.querySelector(".fab").style.display = n ? "flex" : "none";
+  document.getElementById("totop").classList.toggle("lifted", n > 0);
   const box = document.getElementById("items");
   let subtotal = 0;
   const parse = key => {
@@ -1041,6 +1048,10 @@ function refresh(){
   nameIn.classList.toggle("ok", !!CUSTOMER_NAME);
   save();
 }
+function toTop(){ window.scrollTo({top:0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"}); }
+addEventListener("scroll", () => {
+  document.getElementById("totop").classList.toggle("show", scrollY > 600);
+}, {passive:true});
 function openCart(){ document.getElementById("drawer").classList.add("open"); document.getElementById("drawer").setAttribute("aria-hidden","false"); refresh(); if(typeof gtag === "function") gtag("event", "view_cart"); }
 function closeCart(){ document.getElementById("drawer").classList.remove("open"); document.getElementById("drawer").setAttribute("aria-hidden","true"); }
 function openMarketplace(){
